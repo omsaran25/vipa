@@ -34,12 +34,12 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-950 dark:bg-slate-950 light:bg-slate-50 text-slate-100 light:text-slate-900 transition-colors duration-300 font-sans">
+    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
       {/* Top Navbar */}
       <Navbar onOpenBooking={() => handleOpenBooking(null)} />
 
       <main>
-        {/* Hero Section with 3D Globe */}
+        {/* Hero Section */}
         <Hero
           onSearchSubmit={(filters) => setSearchFilters(filters)}
           onOpenBooking={() => handleOpenBooking(null)}
@@ -52,7 +52,7 @@ function AppContent() {
           onQuickBook={(pkg) => handleOpenBooking(pkg)}
         />
 
-        {/* 3D Trending Spotlights */}
+        {/* Indian Spotlights */}
         <DestinationShowcase onSelectDestination={handleSelectDestination} />
 
         {/* Services Showcase */}

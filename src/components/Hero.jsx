@@ -6,7 +6,6 @@ import { useLanguage } from '../context/LanguageContext';
 export default function Hero({ onSearchSubmit, onOpenBooking }) {
   const { lang, t } = useLanguage();
 
-  // Search state
   const [destinationQuery, setDestinationQuery] = useState('');
   const [travelDate, setTravelDate] = useState('');
   const [guests, setGuests] = useState('2');
@@ -54,47 +53,43 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
   };
 
   return (
-    <section id="home" className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-b from-teal-50/60 via-white to-slate-50 dark:from-slate-950 dark:via-slate-950 dark:to-slate-900 overflow-hidden">
+    <section id="home" className="relative pt-24 pb-16 lg:pt-32 lg:pb-24 bg-gradient-to-b from-teal-50/70 via-white to-slate-50 overflow-hidden">
       
-      {/* Background ambient lighting glows */}
-      <div className="absolute top-10 left-10 w-96 h-96 bg-teal-400/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute top-1/3 right-10 w-96 h-96 bg-sky-500/10 rounded-full blur-3xl pointer-events-none"></div>
+      {/* Ambient background glows */}
+      <div className="absolute top-10 left-10 w-96 h-96 bg-teal-300/20 rounded-full blur-3xl pointer-events-none"></div>
+      <div className="absolute top-1/3 right-10 w-96 h-96 bg-sky-300/20 rounded-full blur-3xl pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10 relative">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           
-          {/* Left Hero Content */}
+          {/* Left Text & Search Box */}
           <div className="lg:col-span-6 flex flex-col items-start space-y-6">
             
-            {/* Top Badge */}
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-100/80 dark:bg-slate-900 border border-teal-300 dark:border-teal-500/30 text-teal-800 dark:text-teal-300 text-xs sm:text-sm font-bold tracking-wide shadow-sm">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-teal-100 border border-teal-300 text-teal-800 text-xs sm:text-sm font-bold tracking-wide shadow-sm">
               <Sparkles className="w-4 h-4 text-amber-500" />
               <span>{t('hero.badge')}</span>
             </div>
 
-            {/* Main Title */}
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 dark:text-white leading-[1.15] font-outfit">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight text-slate-900 leading-[1.15] font-outfit">
               {t('hero.titlePrefix')}{' '}
               <span className="gradient-text">{t('hero.titleHighlight')}</span>
               <br />
-              <span className="text-slate-800 dark:text-slate-200 font-extrabold text-3xl sm:text-4xl lg:text-5xl block mt-2">
+              <span className="text-slate-800 font-extrabold text-3xl sm:text-4xl lg:text-5xl block mt-2">
                 {t('hero.titleSuffix')}
               </span>
             </h1>
 
-            {/* Subtitle */}
-            <p className="text-slate-600 dark:text-slate-300 text-base sm:text-lg max-w-xl font-normal leading-relaxed">
+            <p className="text-slate-600 text-base sm:text-lg max-w-xl font-medium leading-relaxed">
               {t('hero.subtitle')}
             </p>
 
-            {/* Fresh Light Search Box */}
-            <div className="w-full bg-white dark:bg-slate-900 p-4 sm:p-5 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl shadow-teal-900/10">
+            {/* Search Box */}
+            <div className="w-full bg-white p-4 sm:p-5 rounded-3xl border border-slate-200 shadow-xl shadow-teal-900/5">
               <form onSubmit={handleSearch} className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
                 
-                {/* Destination Input */}
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                    <MapPin className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+                  <label className="text-xs font-bold text-slate-600 flex items-center gap-1.5">
+                    <MapPin className="w-3.5 h-3.5 text-teal-700" />
                     {t('hero.searchBox.destination')}
                   </label>
                   <input
@@ -102,34 +97,32 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
                     placeholder={t('hero.searchBox.destinationPlaceholder')}
                     value={destinationQuery}
                     onChange={(e) => setDestinationQuery(e.target.value)}
-                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                    className="w-full px-3 py-2 bg-slate-50 text-slate-900 text-xs font-semibold rounded-xl border border-slate-200 focus:outline-none focus:border-teal-500"
                   />
                 </div>
 
-                {/* Travel Date */}
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                    <Calendar className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+                  <label className="text-xs font-bold text-slate-600 flex items-center gap-1.5">
+                    <Calendar className="w-3.5 h-3.5 text-teal-700" />
                     {t('hero.searchBox.travelDate')}
                   </label>
                   <input
                     type="date"
                     value={travelDate}
                     onChange={(e) => setTravelDate(e.target.value)}
-                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                    className="w-full px-3 py-2 bg-slate-50 text-slate-900 text-xs font-semibold rounded-xl border border-slate-200 focus:outline-none focus:border-teal-500"
                   />
                 </div>
 
-                {/* Travelers Count */}
                 <div className="flex flex-col gap-1">
-                  <label className="text-xs font-bold text-slate-500 dark:text-slate-400 flex items-center gap-1.5">
-                    <Users className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
+                  <label className="text-xs font-bold text-slate-600 flex items-center gap-1.5">
+                    <Users className="w-3.5 h-3.5 text-teal-700" />
                     {t('hero.searchBox.guests')}
                   </label>
                   <select
                     value={guests}
                     onChange={(e) => setGuests(e.target.value)}
-                    className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                    className="w-full px-3 py-2 bg-slate-50 text-slate-900 text-xs font-semibold rounded-xl border border-slate-200 focus:outline-none focus:border-teal-500"
                   >
                     <option value="1">1 Solo Traveler</option>
                     <option value="2">2 Couple / Duo</option>
@@ -138,7 +131,6 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
                   </select>
                 </div>
 
-                {/* Search Button */}
                 <div className="flex items-end">
                   <button
                     type="submit"
@@ -151,53 +143,53 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
               </form>
             </div>
 
-            {/* Key Trust Stats Highlights */}
+            {/* Trust Badges */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2 w-full">
-              <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
                 <Star className="w-5 h-5 text-amber-500 shrink-0 fill-amber-500" />
                 <div className="flex flex-col">
-                  <span className="text-xs font-bold text-slate-900 dark:text-white">4.9/5 Rating</span>
-                  <span className="text-[10px] text-slate-500">2.4k+ Reviews</span>
+                  <span className="text-xs font-extrabold text-slate-900">4.9/5 Rating</span>
+                  <span className="text-[10px] text-slate-500 font-medium">2.4k+ Reviews</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+              <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
                 <ShieldCheck className="w-5 h-5 text-emerald-600 shrink-0" />
                 <div className="flex flex-col">
-                  <span className="text-xs font-bold text-slate-900 dark:text-white">100% Verified</span>
-                  <span className="text-[10px] text-slate-500">Luxury Stays</span>
+                  <span className="text-xs font-extrabold text-slate-900">100% Verified</span>
+                  <span className="text-[10px] text-slate-500 font-medium">Luxury Stays</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                <Headphones className="w-5 h-5 text-teal-600 shrink-0" />
+              <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <Headphones className="w-5 h-5 text-teal-700 shrink-0" />
                 <div className="flex flex-col">
-                  <span className="text-xs font-bold text-slate-900 dark:text-white">24/7 VIP Desk</span>
-                  <span className="text-[10px] text-slate-500">On-Trip Support</span>
+                  <span className="text-xs font-extrabold text-slate-900">24/7 VIP Desk</span>
+                  <span className="text-[10px] text-slate-500 font-medium">On-Trip Support</span>
                 </div>
               </div>
 
-              <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
-                <Award className="w-5 h-5 text-sky-600 shrink-0" />
+              <div className="flex items-center gap-2.5 p-3 rounded-2xl bg-white border border-slate-200 shadow-sm">
+                <Award className="w-5 h-5 text-sky-700 shrink-0" />
                 <div className="flex flex-col">
-                  <span className="text-xs font-bold text-slate-900 dark:text-white">Best Quotes</span>
-                  <span className="text-[10px] text-slate-500">Customized Deals</span>
+                  <span className="text-xs font-extrabold text-slate-900">Best Quotes</span>
+                  <span className="text-[10px] text-slate-500 font-medium">Customized Deals</span>
                 </div>
               </div>
             </div>
 
           </div>
 
-          {/* Right Fresh Visual Showcase Grid */}
+          {/* Right Spotlight Showcase */}
           <div className="lg:col-span-6 space-y-4">
             <div className="flex items-center justify-between">
-              <span className="text-xs font-bold text-teal-700 dark:text-teal-400 uppercase tracking-widest flex items-center gap-1.5">
+              <span className="text-xs font-bold text-teal-700 uppercase tracking-widest flex items-center gap-1.5">
                 <Compass className="w-4 h-4" />
-                Trending Destinations in India
+                Trending Indian Spotlights
               </span>
               <button
                 onClick={() => onOpenBooking()}
-                className="text-xs font-bold text-teal-700 hover:text-teal-900 underline"
+                className="text-xs font-extrabold text-teal-700 hover:text-teal-900 underline"
               >
                 Request Custom Package →
               </button>
@@ -209,7 +201,7 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
                   key={idx}
                   whileHover={{ y: -6, scale: 1.02 }}
                   onClick={() => handleSpotlightClick(item.query)}
-                  className="relative h-72 rounded-3xl overflow-hidden shadow-xl cursor-pointer group border border-slate-200 dark:border-slate-800"
+                  className="relative h-72 rounded-3xl overflow-hidden shadow-xl cursor-pointer group border border-slate-200"
                 >
                   <img
                     src={item.image}
@@ -218,7 +210,7 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                   
-                  <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] font-extrabold text-teal-800 uppercase tracking-wider">
+                  <div className="absolute top-3 left-3 bg-white/95 backdrop-blur-md px-2.5 py-0.5 rounded-full text-[10px] font-extrabold text-teal-800 uppercase tracking-wider shadow-sm">
                     {item.tag}
                   </div>
 
