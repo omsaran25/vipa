@@ -23,7 +23,7 @@ export default function ContactSection() {
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-teal-100 dark:bg-slate-900 border border-teal-300 dark:border-teal-500/30 text-teal-800 dark:text-teal-300 text-xs font-bold uppercase tracking-wider">
-            <Mail className="w-3.5 h-3.5 text-teal-600" />
+            <Mail className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
             <span>{t('contact.tag')}</span>
           </div>
 
@@ -71,16 +71,16 @@ export default function ContactSection() {
                 <p className="text-xs font-black text-amber-600 dark:text-amber-400">
                   {t('contact.info.phone')}
                 </p>
-                <p className="text-[11px] text-slate-500 font-bold">Toll Free 24/7 VIP Travel Desk</p>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-bold">Toll Free 24/7 VIP Travel Desk</p>
               </div>
             </div>
 
             {/* Email & Hours */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="glass-card p-5 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center gap-3 shadow-sm">
-                <Mail className="w-5 h-5 text-indigo-600 shrink-0" />
+                <Mail className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0" />
                 <div className="flex flex-col truncate">
-                  <span className="text-[11px] text-slate-400 font-bold">Email</span>
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400 font-bold">Email</span>
                   <span className="text-xs font-extrabold text-slate-900 dark:text-white truncate">
                     {t('contact.info.email')}
                   </span>
@@ -88,9 +88,9 @@ export default function ContactSection() {
               </div>
 
               <div className="glass-card p-5 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex items-center gap-3 shadow-sm">
-                <Clock className="w-5 h-5 text-emerald-600 shrink-0" />
+                <Clock className="w-5 h-5 text-emerald-600 dark:text-emerald-400 shrink-0" />
                 <div className="flex flex-col">
-                  <span className="text-[11px] text-slate-400 font-bold">Working Hours</span>
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400 font-bold">Working Hours</span>
                   <span className="text-xs font-extrabold text-slate-900 dark:text-white">
                     Mon - Sat 9am-8.5pm
                   </span>
@@ -108,7 +108,7 @@ export default function ContactSection() {
               </h3>
 
               {sent && (
-                <div className="mb-6 p-4 rounded-2xl bg-emerald-100 border border-emerald-300 text-emerald-800 text-xs font-bold flex items-center gap-2">
+                <div className="mb-6 p-4 rounded-2xl bg-emerald-100 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/40 text-emerald-800 dark:text-emerald-300 text-xs font-bold flex items-center gap-2">
                   <CheckCircle2 className="w-5 h-5" />
                   <span>{t('contact.form.success')}</span>
                 </div>
@@ -126,7 +126,7 @@ export default function ContactSection() {
                       placeholder="Your Full Name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                     />
                   </div>
 
@@ -140,7 +140,7 @@ export default function ContactSection() {
                       placeholder="+91 Mobile Number"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                     />
                   </div>
                 </div>
@@ -155,7 +155,7 @@ export default function ContactSection() {
                     placeholder="name@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                   />
                 </div>
 
@@ -169,7 +169,7 @@ export default function ContactSection() {
                     placeholder="Describe your travel dates, preferred Indian destination, or family requirements..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                   ></textarea>
                 </div>
 

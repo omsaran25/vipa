@@ -35,13 +35,13 @@ export default function BookingModal({ preselectedPackage, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto bg-slate-950/60 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-xl bg-white rounded-3xl border border-slate-200 shadow-2xl overflow-hidden my-8 p-6 sm:p-8">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto bg-slate-950/70 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="relative w-full max-w-xl bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-8 p-6 sm:p-8">
         
         {/* Close */}
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 text-slate-500 hover:text-slate-900 transition-colors"
+          className="absolute top-5 right-5 p-2 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-500 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white transition-colors"
         >
           <X className="w-5 h-5" />
         </button>
@@ -50,14 +50,14 @@ export default function BookingModal({ preselectedPackage, onClose }) {
           <div>
             {/* Header */}
             <div className="mb-6">
-              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-100 border border-teal-300 text-teal-800 text-xs font-bold mb-2">
+              <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-teal-100 dark:bg-slate-800 border border-teal-300 dark:border-teal-500/30 text-teal-800 dark:text-teal-300 text-xs font-bold mb-2">
                 <Sparkles className="w-3.5 h-3.5 text-amber-500" />
                 <span>Instant Travel Concierge</span>
               </div>
-              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 font-outfit">
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white font-outfit">
                 {t('booking.title')}
               </h2>
-              <p className="text-xs sm:text-sm text-slate-600 font-medium mt-1">
+              <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 font-medium mt-1">
                 {t('booking.subtitle')}
               </p>
             </div>
@@ -67,7 +67,7 @@ export default function BookingModal({ preselectedPackage, onClose }) {
               
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-xs font-bold text-slate-700 block mb-1">
+                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">
                     {t('booking.fullName')} *
                   </label>
                   <div className="relative">
@@ -78,13 +78,13 @@ export default function BookingModal({ preselectedPackage, onClose }) {
                       placeholder={t('booking.fullNamePlaceholder')}
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 text-slate-900 text-xs font-semibold rounded-xl border border-slate-200 focus:outline-none focus:border-teal-500"
+                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-bold text-slate-700 block mb-1">
+                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">
                     {t('booking.phone')} *
                   </label>
                   <div className="relative">
@@ -95,7 +95,7 @@ export default function BookingModal({ preselectedPackage, onClose }) {
                       placeholder={t('booking.phonePlaceholder')}
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 text-slate-900 text-xs font-semibold rounded-xl border border-slate-200 focus:outline-none focus:border-teal-500"
+                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                     />
                   </div>
                 </div>
@@ -103,7 +103,7 @@ export default function BookingModal({ preselectedPackage, onClose }) {
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-xs font-bold text-slate-700 block mb-1">
+                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">
                     {t('booking.email')} *
                   </label>
                   <div className="relative">
@@ -114,27 +114,27 @@ export default function BookingModal({ preselectedPackage, onClose }) {
                       placeholder={t('booking.emailPlaceholder')}
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 text-slate-900 text-xs font-semibold rounded-xl border border-slate-200 focus:outline-none focus:border-teal-500"
+                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-bold text-slate-700 block mb-1">
+                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">
                     {t('booking.destination')}
                   </label>
                   <input
                     type="text"
                     value={formData.package}
                     onChange={(e) => setFormData({ ...formData, package: e.target.value })}
-                    className="w-full px-3 py-2.5 bg-slate-50 text-slate-900 text-xs font-semibold rounded-xl border border-slate-200 focus:outline-none focus:border-teal-500"
+                    className="w-full px-3 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                   />
                 </div>
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 <div>
-                  <label className="text-xs font-bold text-slate-700 block mb-1">
+                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">
                     {t('booking.travelDate')}
                   </label>
                   <div className="relative">
@@ -143,13 +143,13 @@ export default function BookingModal({ preselectedPackage, onClose }) {
                       type="date"
                       value={formData.date}
                       onChange={(e) => setFormData({ ...formData, date: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 text-slate-900 text-xs font-semibold rounded-xl border border-slate-200 focus:outline-none focus:border-teal-500"
+                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="text-xs font-bold text-slate-700 block mb-1">
+                  <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">
                     {t('booking.travelers')}
                   </label>
                   <div className="relative">
@@ -157,7 +157,7 @@ export default function BookingModal({ preselectedPackage, onClose }) {
                     <select
                       value={formData.guests}
                       onChange={(e) => setFormData({ ...formData, guests: e.target.value })}
-                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 text-slate-900 text-xs font-semibold rounded-xl border border-slate-200 focus:outline-none focus:border-teal-500"
+                      className="w-full pl-9 pr-3 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                     >
                       <option value="1">1 Guest</option>
                       <option value="2">2 Guests (Couple)</option>
@@ -169,7 +169,7 @@ export default function BookingModal({ preselectedPackage, onClose }) {
               </div>
 
               <div>
-                <label className="text-xs font-bold text-slate-700 block mb-1">
+                <label className="text-xs font-bold text-slate-700 dark:text-slate-300 block mb-1">
                   {t('booking.specialRequests')}
                 </label>
                 <textarea
@@ -177,7 +177,7 @@ export default function BookingModal({ preselectedPackage, onClose }) {
                   placeholder={t('booking.specialRequestsPlaceholder')}
                   value={formData.notes}
                   onChange={(e) => setFormData({ ...formData, notes: e.target.value })}
-                  className="w-full px-3 py-2 bg-slate-50 text-slate-900 text-xs font-semibold rounded-xl border border-slate-200 focus:outline-none focus:border-teal-500"
+                  className="w-full px-3 py-2 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
                 ></textarea>
               </div>
 
@@ -192,9 +192,9 @@ export default function BookingModal({ preselectedPackage, onClose }) {
                 </button>
 
                 <div className="flex items-center gap-3 my-2">
-                  <div className="flex-1 h-px bg-slate-200"></div>
+                  <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
                   <span className="text-[11px] font-bold text-slate-400">{t('booking.orText')}</span>
-                  <div className="flex-1 h-px bg-slate-200"></div>
+                  <div className="flex-1 h-px bg-slate-200 dark:bg-slate-800"></div>
                 </div>
 
                 <button
@@ -211,19 +211,19 @@ export default function BookingModal({ preselectedPackage, onClose }) {
           </div>
         ) : (
           <div className="py-8 flex flex-col items-center text-center space-y-4">
-            <div className="w-16 h-16 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center border border-emerald-300">
+            <div className="w-16 h-16 rounded-full bg-emerald-100 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center border border-emerald-300 dark:border-emerald-500/40">
               <CheckCircle className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-black text-slate-900 font-outfit">
+            <h3 className="text-2xl font-black text-slate-900 dark:text-white font-outfit">
               Quote Request Submitted!
             </h3>
-            <p className="text-sm text-slate-600 font-medium max-w-sm">
+            <p className="text-sm text-slate-600 dark:text-slate-300 font-medium max-w-sm">
               {t('booking.successMsg')}
             </p>
             <div className="pt-4">
               <button
                 onClick={onClose}
-                className="px-6 py-2.5 rounded-xl bg-slate-100 text-slate-900 font-bold text-xs hover:bg-slate-200"
+                className="px-6 py-2.5 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-900 dark:text-white font-bold text-xs hover:bg-slate-200 dark:hover:bg-slate-700"
               >
                 Close Window
               </button>

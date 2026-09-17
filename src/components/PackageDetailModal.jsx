@@ -10,22 +10,22 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
   if (!pkg) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-slate-950/60 backdrop-blur-md animate-in fade-in duration-200">
-      <div className="relative w-full max-w-4xl bg-white rounded-3xl border border-slate-200 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto bg-slate-950/70 backdrop-blur-md animate-in fade-in duration-200">
+      <div className="relative w-full max-w-4xl bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-2xl overflow-hidden my-8 max-h-[90vh] flex flex-col">
         
-        {/* Header Bar */}
-        <div className="flex items-center justify-between p-5 border-b border-slate-200 bg-slate-50">
+        {/* Header */}
+        <div className="flex items-center justify-between p-5 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
           <div>
-            <span className="text-xs font-extrabold text-teal-700 uppercase tracking-widest">
+            <span className="text-xs font-extrabold text-teal-700 dark:text-teal-400 uppercase tracking-widest">
               India Tour Package • {pkg.durationDays} Days
             </span>
-            <h2 className="text-xl sm:text-2xl font-black text-slate-900 font-outfit line-clamp-1">
+            <h2 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-outfit line-clamp-1">
               {pkg.title[lang]}
             </h2>
           </div>
           <button
             onClick={onClose}
-            className="p-2 rounded-full bg-slate-200 text-slate-700 hover:text-slate-900 transition-colors"
+            className="p-2 rounded-full bg-slate-200 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -61,12 +61,12 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
               </div>
 
               {/* Badges */}
-              <div className="bg-slate-100 p-3 rounded-2xl flex items-center justify-between text-xs">
-                <div className="flex items-center gap-1.5 text-amber-600 font-bold">
+              <div className="bg-slate-100 dark:bg-slate-800 p-3 rounded-2xl flex items-center justify-between text-xs">
+                <div className="flex items-center gap-1.5 text-amber-600 dark:text-amber-400 font-bold">
                   <Star className="w-4 h-4 fill-amber-500 text-amber-500" />
                   <span>{pkg.rating} ({pkg.reviewsCount})</span>
                 </div>
-                <div className="flex items-center gap-1.5 text-teal-700 font-bold">
+                <div className="flex items-center gap-1.5 text-teal-700 dark:text-teal-400 font-bold">
                   <Clock className="w-4 h-4" />
                   <span>{pkg.durationDays}D / {pkg.durationNights}N</span>
                 </div>
@@ -75,13 +75,13 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
           </div>
 
           {/* Navigation Tabs */}
-          <div className="flex items-center gap-3 border-b border-slate-200 pb-2">
+          <div className="flex items-center gap-3 border-b border-slate-200 dark:border-slate-800 pb-2">
             <button
               onClick={() => setActiveTab('itinerary')}
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                 activeTab === 'itinerary'
                   ? 'bg-teal-600 text-white shadow-md'
-                  : 'text-slate-600 hover:text-slate-900'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               {t('modal.itinerary')}
@@ -92,7 +92,7 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
               className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold transition-all ${
                 activeTab === 'inclusions'
                   ? 'bg-teal-600 text-white shadow-md'
-                  : 'text-slate-600 hover:text-slate-900'
+                  : 'text-slate-600 dark:text-slate-400 hover:text-slate-900 dark:hover:text-white'
               }`}
             >
               {t('modal.inclusions')}
@@ -105,14 +105,14 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
               {pkg.itinerary[lang].map((item) => (
                 <div
                   key={item.day}
-                  className="p-4 rounded-2xl bg-slate-50 border border-slate-200 flex flex-col sm:flex-row items-start gap-4"
+                  className="p-4 rounded-2xl bg-slate-50 dark:bg-slate-800/80 border border-slate-200 dark:border-slate-700 flex flex-col sm:flex-row items-start gap-4"
                 >
                   <div className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-teal-600 to-sky-700 text-white font-extrabold text-xs shadow-md shrink-0">
                     Day {item.day}
                   </div>
                   <div>
-                    <h4 className="text-sm font-bold text-slate-900">{item.title}</h4>
-                    <p className="text-xs text-slate-700 font-medium mt-1 leading-relaxed">
+                    <h4 className="text-sm font-bold text-slate-900 dark:text-white">{item.title}</h4>
+                    <p className="text-xs text-slate-700 dark:text-slate-300 font-medium mt-1 leading-relaxed">
                       {item.detail}
                     </p>
                   </div>
@@ -124,12 +124,12 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
           {/* Tab 2: Inclusions & Exclusions */}
           {activeTab === 'inclusions' && (
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              <div className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200">
-                <h4 className="text-sm font-bold text-emerald-800 flex items-center gap-2 mb-3">
+              <div className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-500/40">
+                <h4 className="text-sm font-bold text-emerald-800 dark:text-emerald-400 flex items-center gap-2 mb-3">
                   <CheckCircle className="w-4 h-4" />
                   {t('modal.inclusions')}
                 </h4>
-                <ul className="space-y-2 text-xs text-slate-700 font-medium">
+                <ul className="space-y-2 text-xs text-slate-700 dark:text-slate-200 font-medium">
                   <li className="flex items-center gap-2">✓ 4-Star / 5-Star Accommodations with Breakfast & Dinner</li>
                   <li className="flex items-center gap-2">✓ Private AC Vehicle transfers for all sightseeing</li>
                   <li className="flex items-center gap-2">✓ All Entry Permits, Toll Taxes, Driver Allowance</li>
@@ -137,12 +137,12 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
                 </ul>
               </div>
 
-              <div className="p-4 rounded-2xl bg-rose-50 border border-rose-200">
-                <h4 className="text-sm font-bold text-rose-800 flex items-center gap-2 mb-3">
+              <div className="p-4 rounded-2xl bg-rose-50 dark:bg-rose-950/30 border border-rose-200 dark:border-rose-500/40">
+                <h4 className="text-sm font-bold text-rose-800 dark:text-rose-400 flex items-center gap-2 mb-3">
                   <XCircle className="w-4 h-4" />
                   {t('modal.exclusions')}
                 </h4>
-                <ul className="space-y-2 text-xs text-slate-700 font-medium">
+                <ul className="space-y-2 text-xs text-slate-700 dark:text-slate-200 font-medium">
                   <li className="flex items-center gap-2">✕ Personal expenses (Shopping, Laundry, Telephone)</li>
                   <li className="flex items-center gap-2">✕ Travel Insurance & Medical Expenses</li>
                   <li className="flex items-center gap-2">✕ Tips for drivers and tour guides</li>
@@ -155,10 +155,10 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
         </div>
 
         {/* Modal Footer */}
-        <div className="p-5 border-t border-slate-200 bg-slate-50 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="p-5 border-t border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex flex-col">
-            <span className="text-xs font-bold text-slate-500">Custom Rate Quote</span>
-            <span className="text-sm font-extrabold text-teal-700">
+            <span className="text-xs font-bold text-slate-500 dark:text-slate-400">Custom Rate Quote</span>
+            <span className="text-sm font-extrabold text-teal-700 dark:text-teal-400">
               Personalized Deal For Your Travelers
             </span>
           </div>
@@ -166,7 +166,7 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
           <div className="flex items-center gap-3 w-full sm:w-auto">
             <button
               onClick={onClose}
-              className="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-slate-200 text-slate-800 font-bold text-xs hover:bg-slate-300 transition-all"
+              className="flex-1 sm:flex-none px-5 py-2.5 rounded-xl bg-slate-200 dark:bg-slate-800 text-slate-800 dark:text-slate-200 font-bold text-xs hover:bg-slate-300 dark:hover:bg-slate-700 transition-all"
             >
               {t('modal.close')}
             </button>

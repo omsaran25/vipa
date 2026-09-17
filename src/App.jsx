@@ -34,7 +34,7 @@ function AppContent() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans">
+    <div className="min-h-screen bg-slate-50 dark:bg-slate-950 text-slate-900 dark:text-slate-100 transition-colors duration-300 font-sans">
       {/* Top Navbar */}
       <Navbar onOpenBooking={() => handleOpenBooking(null)} />
 

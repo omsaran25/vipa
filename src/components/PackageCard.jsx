@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Star, Clock, Plane, Building2, UtensilsCrossed, Compass, CheckCircle2, ChevronRight, Sparkles } from 'lucide-react';
+import { MapPin, Star, Clock, Plane, Building2, UtensilsCrossed, Compass, CheckCircle2, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
 
@@ -10,7 +10,7 @@ export default function PackageCard({ pkg, onSelectPackage, onQuickBook }) {
     <motion.div
       whileHover={{ y: -6 }}
       transition={{ duration: 0.25, ease: 'easeOut' }}
-      className="bg-white rounded-3xl overflow-hidden flex flex-col h-full border border-slate-200 group relative shadow-md hover:shadow-2xl transition-all duration-300"
+      className="bg-white dark:bg-slate-900 rounded-3xl overflow-hidden flex flex-col h-full border border-slate-200 dark:border-slate-800 group relative shadow-md hover:shadow-2xl transition-all duration-300"
     >
       {/* Package Image & Badges */}
       <div className="relative h-60 w-full overflow-hidden">
@@ -28,10 +28,10 @@ export default function PackageCard({ pkg, onSelectPackage, onQuickBook }) {
         </div>
 
         {/* Rating Pill */}
-        <div className="absolute top-3 right-3 bg-white/95 backdrop-blur-md px-2.5 py-1 rounded-full text-xs font-extrabold text-amber-500 flex items-center gap-1 border border-amber-400 shadow-md">
+        <div className="absolute top-3 right-3 bg-white/95 dark:bg-slate-900/90 backdrop-blur-md px-2.5 py-1 rounded-full text-xs font-extrabold text-amber-500 flex items-center gap-1 border border-amber-400 dark:border-amber-500/40 shadow-md">
           <Star className="w-3.5 h-3.5 fill-amber-500 text-amber-500" />
-          <span>{pkg.rating}</span>
-          <span className="text-[10px] text-slate-500 font-medium">({pkg.reviewsCount})</span>
+          <span className="text-slate-900 dark:text-amber-400">{pkg.rating}</span>
+          <span className="text-[10px] text-slate-500 dark:text-slate-400 font-medium">({pkg.reviewsCount})</span>
         </div>
 
         {/* Duration & Location */}
@@ -51,18 +51,18 @@ export default function PackageCard({ pkg, onSelectPackage, onQuickBook }) {
       </div>
 
       {/* Card Body */}
-      <div className="p-5 flex flex-col flex-grow justify-between gap-4 bg-white">
+      <div className="p-5 flex flex-col flex-grow justify-between gap-4 bg-white dark:bg-slate-900">
         <div>
           {/* Title */}
-          <h3 className="text-lg font-extrabold text-slate-900 group-hover:text-teal-700 transition-colors line-clamp-2 font-outfit">
+          <h3 className="text-lg font-extrabold text-slate-900 dark:text-white group-hover:text-teal-700 dark:group-hover:text-teal-400 transition-colors line-clamp-2 font-outfit">
             {pkg.title[lang]}
           </h3>
 
           {/* Highlights List */}
           <ul className="mt-3 space-y-1.5">
             {pkg.highlights[lang].slice(0, 2).map((h, i) => (
-              <li key={i} className="flex items-start gap-2 text-xs text-slate-700 font-medium line-clamp-1">
-                <CheckCircle2 className="w-3.5 h-3.5 text-teal-600 shrink-0 mt-0.5" />
+              <li key={i} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300 font-medium line-clamp-1">
+                <CheckCircle2 className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400 shrink-0 mt-0.5" />
                 <span>{h}</span>
               </li>
             ))}
@@ -70,9 +70,9 @@ export default function PackageCard({ pkg, onSelectPackage, onQuickBook }) {
         </div>
 
         {/* Inclusions */}
-        <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
-          <span className="font-bold text-[11px] uppercase tracking-wider text-slate-600">{t('packages.card.inclusions')}:</span>
-          <div className="flex items-center gap-2.5 text-teal-700">
+        <div className="pt-3 border-t border-slate-100 dark:border-slate-800 flex items-center justify-between text-xs text-slate-500">
+          <span className="font-bold text-[11px] uppercase tracking-wider text-slate-600 dark:text-slate-400">{t('packages.card.inclusions')}:</span>
+          <div className="flex items-center gap-2.5 text-teal-700 dark:text-teal-400">
             {pkg.inclusions.flight && <Plane className="w-4 h-4" title="Flight Included" />}
             {pkg.inclusions.hotel && <Building2 className="w-4 h-4" title="Hotel Included" />}
             {pkg.inclusions.meals && <UtensilsCrossed className="w-4 h-4" title="Meals Included" />}
@@ -84,7 +84,7 @@ export default function PackageCard({ pkg, onSelectPackage, onQuickBook }) {
         <div className="flex items-center gap-2 pt-2">
           <button
             onClick={() => onSelectPackage(pkg)}
-            className="flex-1 py-2.5 px-3 rounded-xl bg-slate-100 text-slate-800 hover:bg-slate-200 text-xs font-bold transition-all cursor-pointer text-center border border-slate-200"
+            className="flex-1 py-2.5 px-3 rounded-xl bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 text-xs font-bold transition-all cursor-pointer text-center border border-slate-200 dark:border-slate-700"
           >
             {t('packages.card.viewDetails')}
           </button>

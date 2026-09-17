@@ -21,7 +21,7 @@ export default function TestimonialsSection() {
             {t('testimonials.title')}
           </h2>
 
-          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300">
+          <p className="text-sm sm:text-base text-slate-600 dark:text-slate-300 font-medium">
             {t('testimonials.subtitle')}
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function TestimonialsSection() {
               key={item.id}
               className="glass-card p-6 sm:p-8 rounded-3xl border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 flex flex-col justify-between relative group shadow-md hover:shadow-xl"
             >
-              <Quote className="w-10 h-10 text-teal-500/15 absolute top-6 right-6 pointer-events-none group-hover:text-teal-500/30 transition-colors" />
+              <Quote className="w-10 h-10 text-teal-500/15 dark:text-teal-400/20 absolute top-6 right-6 pointer-events-none group-hover:text-teal-500/30 transition-colors" />
 
               <div className="space-y-4">
                 {/* Rating Stars */}
@@ -44,7 +44,7 @@ export default function TestimonialsSection() {
                 </div>
 
                 {/* Review Text */}
-                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-300 italic leading-relaxed font-medium">
+                <p className="text-xs sm:text-sm text-slate-700 dark:text-slate-200 italic leading-relaxed font-medium">
                   "{item.comment[lang]}"
                 </p>
               </div>
@@ -54,7 +54,7 @@ export default function TestimonialsSection() {
                 <img
                   src={item.avatar}
                   alt={item.name[lang]}
-                  className="w-12 h-12 rounded-full object-cover border-2 border-teal-600 shadow-md"
+                  className="w-12 h-12 rounded-full object-cover border-2 border-teal-600 dark:border-teal-400 shadow-md"
                 />
                 <div className="flex flex-col">
                   <span className="text-sm font-extrabold text-slate-900 dark:text-white font-outfit">

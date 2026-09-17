@@ -1,5 +1,5 @@
 import React from 'react';
-import { Award, CheckCircle2, ShieldCheck, HeartHandshake, Globe } from 'lucide-react';
+import { CheckCircle2, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 
 export default function AboutSection() {
@@ -50,7 +50,7 @@ export default function AboutSection() {
 
             {/* Floating Trust Badge */}
             <div className="absolute -bottom-6 left-6 bg-white dark:bg-slate-900 p-4 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-2xl flex items-center gap-3">
-              <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center font-black text-xl border border-amber-300">
+              <div className="w-12 h-12 rounded-xl bg-amber-100 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 flex items-center justify-center font-black text-xl border border-amber-300 dark:border-amber-500/40">
                 ★ 4.9
               </div>
               <div className="flex flex-col">
@@ -62,8 +62,8 @@ export default function AboutSection() {
 
           {/* Right Text */}
           <div className="lg:col-span-6 space-y-6">
-            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-teal-100 dark:bg-slate-800 border border-teal-300 text-teal-800 dark:text-teal-300 text-xs font-bold uppercase tracking-wider">
-              <Globe className="w-3.5 h-3.5 text-teal-600" />
+            <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-teal-100 dark:bg-slate-800 border border-teal-300 dark:border-teal-500/30 text-teal-800 dark:text-teal-300 text-xs font-bold uppercase tracking-wider">
+              <Globe className="w-3.5 h-3.5 text-teal-600 dark:text-teal-400" />
               <span>{t('about.tag')}</span>
             </div>
 
@@ -96,7 +96,7 @@ export default function AboutSection() {
                   <span className="text-2xl sm:text-3xl font-black text-amber-500 font-outfit">
                     {s.count}
                   </span>
-                  <span className="text-[11px] text-slate-500 font-bold">
+                  <span className="text-[11px] text-slate-500 dark:text-slate-400 font-bold">
                     {s.label}
                   </span>
                 </div>
