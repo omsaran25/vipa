@@ -8,32 +8,36 @@ export default function DestinationShowcase({ onSelectDestination }) {
 
   const destinations = [
     {
-      id: 'dest-kashmir',
-      name: { en: 'Kashmir Valley & Gulmarg Snow', hi: 'कश्मीर घाटी और गुलमर्ग बर्फ' },
-      state: { en: 'Jammu & Kashmir', hi: 'जम्मू और कश्मीर' },
-      image: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80',
-      badge: 'POPULAR'
+      id: 'dest-jaisalmer',
+      name: { en: 'Jodhpur Jaisalmer — 3 Nights 4 Days', hi: 'जोधपुर जैसलमेर — 3 रात 4 दिन' },
+      state: { en: 'Jaisalmer', hi: 'जैसलमेर' },
+      query: 'Jaisalmer',
+      image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80',
+      badge: '4 DAYS'
     },
     {
-      id: 'dest-kerala',
-      name: { en: 'Kerala Backwaters & Munnar Hills', hi: 'केरल बैकवाटर और मुन्नार पहाड़ियां' },
-      state: { en: 'Kerala', hi: 'केरल' },
-      image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80',
-      badge: 'TOP CHOICE'
+      id: 'dest-jawai',
+      name: { en: 'Jodhpur Jawai Leopard Safari', hi: 'जोधपुर जवाई तेंदुआ सफारी' },
+      state: { en: 'Jawai', hi: 'जवाई' },
+      query: 'Jawai',
+      image: 'https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=800&q=80',
+      badge: '3 DAYS'
     },
     {
-      id: 'dest-rajasthan',
-      name: { en: 'Royal Forts of Rajasthan', hi: 'राजस्थान के शाही किले' },
-      state: { en: 'Rajasthan', hi: 'राजस्थान' },
+      id: 'dest-group',
+      name: { en: 'Rajasthan Group Tours', hi: 'राजस्थान ग्रुप टूर' },
+      state: { en: 'Group Tours', hi: 'ग्रुप टूर' },
+      query: 'Rajasthan Group',
       image: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80',
-      badge: 'HERITAGE'
+      badge: 'GROUPS'
     },
     {
-      id: 'dest-ladakh',
-      name: { en: 'Leh Ladakh Pangong Odyssey', hi: 'लेह लद्दाख पैंगोंग यात्रा' },
-      state: { en: 'Ladakh', hi: 'लद्दाख' },
-      image: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=800&q=80',
-      badge: 'ADVENTURE'
+      id: 'dest-students',
+      name: { en: 'Student Group Tours', hi: 'स्टूडेंट ग्रुप टूर' },
+      state: { en: 'Students', hi: 'स्टूडेंट्स' },
+      query: 'Student',
+      image: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80',
+      badge: 'STUDENTS'
     }
   ];
 
@@ -64,7 +68,7 @@ export default function DestinationShowcase({ onSelectDestination }) {
               key={dest.id}
               whileHover={{ y: -8 }}
               className="relative h-96 rounded-3xl overflow-hidden group cursor-pointer border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl transition-all"
-              onClick={() => onSelectDestination(dest.state.en)}
+              onClick={() => onSelectDestination(dest.query)}
             >
               <img
                 src={dest.image}
@@ -81,7 +85,7 @@ export default function DestinationShowcase({ onSelectDestination }) {
               {/* Bottom Content */}
               <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-1 text-white">
                 <span className="text-xs text-teal-300 font-bold tracking-widest uppercase">
-                  {dest.state[lang]} • India
+                  {dest.state[lang]} • Rajasthan
                 </span>
                 <h3 className="text-xl font-black font-outfit line-clamp-1 group-hover:text-teal-200 transition-colors">
                   {dest.name[lang]}

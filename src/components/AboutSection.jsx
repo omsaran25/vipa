@@ -23,13 +23,13 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img
-                  src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=600&q=80"
-                  alt="Kashmir Valley"
+                  src="https://images.unsplash.com/photo-1602643163983-ed0babc397d6?auto=format&fit=crop&w=600&q=80"
+                  alt="Jodhpur Blue City"
                   className="rounded-3xl object-cover h-64 w-full shadow-lg border border-slate-200 dark:border-slate-800"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=600&q=80"
-                  alt="Kerala Backwaters"
+                  src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80"
+                  alt="Jaisalmer Fort"
                   className="rounded-3xl object-cover h-44 w-full shadow-lg border border-slate-200 dark:border-slate-800"
                 />
               </div>
@@ -41,8 +41,8 @@ export default function AboutSection() {
                   className="rounded-3xl object-cover h-44 w-full shadow-lg border border-slate-200 dark:border-slate-800"
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=600&q=80"
-                  alt="Ladakh Lake"
+                  src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=600&q=80"
+                  alt="Jawai leopard country"
                   className="rounded-3xl object-cover h-64 w-full shadow-lg border border-slate-200 dark:border-slate-800"
                 />
               </div>

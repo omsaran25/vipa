@@ -68,10 +68,13 @@ export default function ContactSection() {
                 <h4 className="text-base font-bold text-slate-900 dark:text-white font-outfit">
                   {t('contact.info.phoneTitle')}
                 </h4>
-                <p className="text-xs font-black text-amber-600 dark:text-amber-400">
+                <a href="tel:+918696924806" className="block text-xs font-black text-amber-600 dark:text-amber-400 hover:underline">
                   {t('contact.info.phone')}
-                </p>
-                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-bold">Toll Free 24/7 VIP Travel Desk</p>
+                </a>
+                <a href="tel:+918764481101" className="block text-xs font-black text-amber-600 dark:text-amber-400 hover:underline">
+                  {t('contact.info.phoneSecondary')}
+                </a>
+                <p className="text-[11px] text-slate-500 dark:text-slate-400 font-bold">Call or WhatsApp the Jodhpur desk</p>
               </div>
             </div>
 
@@ -81,9 +84,9 @@ export default function ContactSection() {
                 <Mail className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0" />
                 <div className="flex flex-col truncate">
                   <span className="text-[11px] text-slate-500 dark:text-slate-400 font-bold">Email</span>
-                  <span className="text-xs font-extrabold text-slate-900 dark:text-white truncate">
+                  <a href="mailto:vipaholidays@gmail.com" className="text-xs font-extrabold text-slate-900 dark:text-white truncate hover:text-teal-700 dark:hover:text-teal-300">
                     {t('contact.info.email')}
-                  </span>
+                  </a>
                 </div>
               </div>
 
@@ -166,7 +169,7 @@ export default function ContactSection() {
                   <textarea
                     rows="4"
                     required
-                    placeholder="Describe your travel dates, preferred Indian destination, or family requirements..."
+                    placeholder="Travel dates, group size, or the Rajasthan package you want..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"

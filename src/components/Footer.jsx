@@ -47,7 +47,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs font-medium">
               <li><a href="#home" className="hover:text-teal-400 transition-colors">Home</a></li>
-              <li><a href="#packages" className="hover:text-teal-400 transition-colors">India Tour Packages</a></li>
+              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Rajasthan Tour Packages</a></li>
               <li><a href="#destinations" className="hover:text-teal-400 transition-colors">Destinations</a></li>
               <li><a href="#services" className="hover:text-teal-400 transition-colors">Services</a></li>
               <li><a href="#about" className="hover:text-teal-400 transition-colors">About Us</a></li>
@@ -61,12 +61,10 @@ export default function Footer() {
               {t('footer.popularDestinations')}
             </h4>
             <ul className="space-y-2 text-xs font-medium">
-              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Kashmir Valley & Gulmarg</a></li>
-              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Kerala Backwaters & Munnar</a></li>
-              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Rajasthan Royal Forts</a></li>
-              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Manali & Solang Valley</a></li>
-              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Leh Ladakh Expedition</a></li>
-              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Goa Beach Vacation</a></li>
+              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Jodhpur Jaisalmer — 3N / 4D</a></li>
+              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Jodhpur Jawai — 2N / 3D</a></li>
+              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Rajasthan Group Tours</a></li>
+              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Student Group Tours</a></li>
             </ul>
           </div>
 
