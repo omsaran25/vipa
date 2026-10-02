@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Sparkles, Search } from 'lucide-react';
 import { packagesData } from '../data/packagesData';
 import { useLanguage } from '../context/LanguageContext';
@@ -10,6 +10,12 @@ export default function PackagesSection({ searchFilters, onSelectPackage, onQuic
   const [searchQuery, setSearchQuery] = useState('');
 
   const categoryKeys = ['all', 'desert', 'wildlife', 'groups', 'students'];
+
+  useEffect(() => {
+    if (searchFilters?.destination) {
+      setSearchQuery(searchFilters.destination);
+    }
+  }, [searchFilters]);
 
   const filteredPackages = useMemo(() => {
     return packagesData.filter((pkg) => {

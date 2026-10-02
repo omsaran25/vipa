@@ -2,26 +2,27 @@ import React from 'react';
 import { Compass, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageFallback';
 
 export default function DestinationShowcase({ onSelectDestination }) {
   const { lang, t } = useLanguage();
 
   const destinations = [
     {
-      id: 'dest-jaisalmer',
-      name: { en: 'Jodhpur Jaisalmer — 3 Nights 4 Days', hi: 'जोधपुर जैसलमेर — 3 रात 4 दिन' },
-      state: { en: 'Jaisalmer', hi: 'जैसलमेर' },
-      query: 'Jaisalmer',
-      image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80',
-      badge: '4 DAYS'
+      id: 'dest-kashmir',
+      name: { en: 'Kashmir Valley & Gulmarg Snow', hi: 'कश्मीर घाटी और गुलमर्ग बर्फ' },
+      state: { en: 'Jammu & Kashmir', hi: 'जम्मू और कश्मीर' },
+      image: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80',
+      query: 'Kashmir',
+      badge: 'POPULAR'
     },
     {
-      id: 'dest-jawai',
-      name: { en: 'Jodhpur Jawai Leopard Safari', hi: 'जोधपुर जवाई तेंदुआ सफारी' },
-      state: { en: 'Jawai', hi: 'जवाई' },
-      query: 'Jawai',
-      image: 'https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=800&q=80',
-      badge: '3 DAYS'
+      id: 'dest-kerala',
+      name: { en: 'Kerala Backwaters & Munnar Hills', hi: 'केरल बैकवाटर और मुन्नार पहाड़ियां' },
+      state: { en: 'Kerala', hi: 'केरल' },
+      image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=800&q=80',
+      query: 'Kerala',
+      badge: 'TOP CHOICE'
     },
     {
       id: 'dest-group',
@@ -29,15 +30,16 @@ export default function DestinationShowcase({ onSelectDestination }) {
       state: { en: 'Group Tours', hi: 'ग्रुप टूर' },
       query: 'Rajasthan Group',
       image: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80',
-      badge: 'GROUPS'
+      query: 'Rajasthan',
+      badge: 'HERITAGE'
     },
     {
-      id: 'dest-students',
-      name: { en: 'Student Group Tours', hi: 'स्टूडेंट ग्रुप टूर' },
-      state: { en: 'Students', hi: 'स्टूडेंट्स' },
-      query: 'Student',
-      image: 'https://images.unsplash.com/photo-1602643163983-ed0babc397d6?auto=format&fit=crop&w=800&q=80',
-      badge: 'STUDENTS'
+      id: 'dest-ladakh',
+      name: { en: 'Leh Ladakh Pangong Odyssey', hi: 'लेह लद्दाख पैंगोंग यात्रा' },
+      state: { en: 'Ladakh', hi: 'लद्दाख' },
+      image: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=800&q=80',
+      query: 'Ladakh',
+      badge: 'ADVENTURE'
     }
   ];
 
@@ -74,6 +76,7 @@ export default function DestinationShowcase({ onSelectDestination }) {
                 src={dest.image}
                 alt={dest.name[lang]}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                onError={handleImageError}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { Star, Quote, Sparkles } from 'lucide-react';
 import { testimonialsData } from '../data/testimonialsData';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageFallback';
 
 export default function TestimonialsSection() {
   const { lang, t } = useLanguage();
@@ -55,6 +56,7 @@ export default function TestimonialsSection() {
                   src={item.avatar}
                   alt={item.name[lang]}
                   className="w-12 h-12 rounded-full object-cover border-2 border-teal-600 dark:border-teal-400 shadow-md"
+                  onError={handleImageError}
                 />
                 <div className="flex flex-col">
                   <span className="text-sm font-extrabold text-slate-900 dark:text-white font-outfit">

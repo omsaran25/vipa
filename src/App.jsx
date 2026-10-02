@@ -13,6 +13,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import PackageDetailModal from './components/PackageDetailModal';
 import BookingModal from './components/BookingModal';
+import TravelChatbot from './components/TravelChatbot';
 
 function AppContent() {
   const [searchFilters, setSearchFilters] = useState(null);
@@ -56,7 +57,7 @@ function AppContent() {
         <DestinationShowcase onSelectDestination={handleSelectDestination} />
 
         {/* Services Showcase */}
-        <ServicesSection />
+        <ServicesSection onOpenBooking={() => handleOpenBooking(null)} />
 
         {/* About Company & Stats */}
         <AboutSection />
@@ -72,7 +73,7 @@ function AppContent() {
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Footer onSelectDestination={handleSelectDestination} />
 
       {/* Modals */}
       {activeDetailPackage && (
@@ -89,6 +90,8 @@ function AppContent() {
           onClose={() => setBookingModalOpen(false)}
         />
       )}
+
+      <TravelChatbot />
     </div>
   );
 }

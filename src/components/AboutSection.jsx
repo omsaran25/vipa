@@ -1,6 +1,7 @@
 import React from 'react';
 import { CheckCircle2, Globe } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageFallback';
 
 export default function AboutSection() {
   const { t } = useLanguage();
@@ -26,11 +27,13 @@ export default function AboutSection() {
                   src="https://images.unsplash.com/photo-1602643163983-ed0babc397d6?auto=format&fit=crop&w=600&q=80"
                   alt="Jodhpur Blue City"
                   className="rounded-3xl object-cover h-64 w-full shadow-lg border border-slate-200 dark:border-slate-800"
+                  onError={handleImageError}
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80"
-                  alt="Jaisalmer Fort"
+                  src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80"
+                  alt="Kerala Backwaters"
                   className="rounded-3xl object-cover h-44 w-full shadow-lg border border-slate-200 dark:border-slate-800"
+                  onError={handleImageError}
                 />
               </div>
 
@@ -39,11 +42,13 @@ export default function AboutSection() {
                   src="https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=600&q=80"
                   alt="Rajasthan Fort"
                   className="rounded-3xl object-cover h-44 w-full shadow-lg border border-slate-200 dark:border-slate-800"
+                  onError={handleImageError}
                 />
                 <img
                   src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=600&q=80"
                   alt="Jawai leopard country"
                   className="rounded-3xl object-cover h-64 w-full shadow-lg border border-slate-200 dark:border-slate-800"
+                  onError={handleImageError}
                 />
               </div>
             </div>

@@ -78,7 +78,7 @@ export const translations = {
       travelDate: "Preferred Departure Date",
       travelers: "Number of Guests",
       specialRequests: "Customization & Preferences",
-      specialRequestsPlaceholder: "e.g. student group size, desert camp, leopard safari, vegetarian meals...",
+      specialRequestsPlaceholder: "e.g. 5-star hotel, vegetarian food, honeymoon setup, extra sightseeing...",
       submitBtn: "Request Custom Quote",
       whatsAppBtn: "Instant WhatsApp Inquiry",
       successMsg: "Thank you! Your quote inquiry has been submitted. Our travel expert will call you shortly with the best customized deal.",
@@ -100,12 +100,8 @@ export const translations = {
           desc: "Jodhpur–Jaisalmer (3 nights / 4 days) and Jodhpur–Jawai (2 nights / 3 days), built around your dates."
         },
         {
-          title: "Train & Flight Ticketing",
-          desc: "Rail and flight bookings into Jodhpur and Jaisalmer, with group discounts for larger parties."
-        },
-        {
-          title: "Cabs & Group Coaches",
-          desc: "Private AC cars, SUVs, and tempo travelers with drivers who know Rajasthan roads."
+          title: "VIP Cab & Tempo Transfers",
+          desc: "Private AC sedans, SUVs, and luxury Tempo Travelers with professional local drivers."
         },
         {
           title: "Havelis, Hotels & Desert Camps",
@@ -190,8 +186,8 @@ export const translations = {
           a: "Packages include hotel or desert-camp stays, meals as listed, AC transfers, a local guide, and sightseeing such as forts, Sam camel safari, or a Jawai leopard safari. Student tours use group hotels and a supervised coach."
         },
         {
-          q: "Do you provide flight and train tickets along with land packages?",
-          a: "Yes! We offer both options: 'Land Only' packages and 'All-Inclusive Packages' including flights or IRCTC train tickets from your home city."
+          q: "Do you offer EMI or flexible payment plans for tour packages?",
+          a: "Yes. We provide flexible customized payment schedules and EMI options on select domestic packages. Your travel specialist will share eligible plans when you request a quote."
         },
         {
           q: "What is your cancellation and refund policy?",
@@ -311,12 +307,8 @@ export const translations = {
           desc: "जोधपुर–जैसलमेर (3 रात / 4 दिन) और जोधपुर–जवाई (2 रात / 3 दिन), आपकी तारीखों के अनुसार।"
         },
         {
-          title: "ट्रेन और फ्लाइट टिकट",
-          desc: "जोधपुर और जैसलमेर के लिए रेल व फ्लाइट बुकिंग, बड़े ग्रुप पर छूट।"
-        },
-        {
-          title: "कैब और ग्रुप कोच",
-          desc: "राजस्थान की सड़कों को जानने वाले ड्राइवरों के साथ निजी एसी कार, एसयूवी और टेम्पो ट्रेवलर।"
+          title: "वीआईपी कैब और टेम्पो ट्रांसफर",
+          desc: "पेशेवर स्थानीय ड्राइवरों के साथ निजी एसी सेडान, एसयूवी और टेम्पो ट्रेवलर।"
         },
         {
           title: "हवेली, होटल और डेजर्ट कैंप",
@@ -401,8 +393,8 @@ export const translations = {
           a: "पैकेज में होटल या डेजर्ट कैंप, सूची के अनुसार भोजन, एसी ट्रांसफर, स्थानीय गाइड, और किले, सैम ऊंट सफारी या जवाई तेंदुआ सफारी शामिल हैं। स्टूडेंट टूर में ग्रुप होटल और निगरानी वाली कोच होती है।"
         },
         {
-          q: "क्या आप पैकेज के साथ उड़ान और ट्रेन टिकट भी प्रदान करते हैं?",
-          a: "हां! हम लैंड पैकेज और उड़ानों या आईआरसीटीसी ट्रेन टिकटों सहित ऑल-इन्क्लूसिव पैकेज दोनों प्रदान करते हैं।"
+          q: "क्या आप टूर पैकेज पर EMI या लचीले भुगतान विकल्प देते हैं?",
+          a: "हां। चुनिंदा घरेलू पैकेजों पर हम कस्टम भुगतान शेड्यूल और EMI विकल्प उपलब्ध कराते हैं। कोटेशन अनुरोध पर आपके यात्रा विशेषज्ञ विवरण साझा करेंगे।"
         },
         {
           q: "आपकी रद्दीकरण और धनवापसी नीति क्या है?",
