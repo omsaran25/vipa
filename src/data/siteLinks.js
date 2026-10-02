@@ -1,10 +1,9 @@
 /** Shared contact & social URLs used across the site (all links are actionable). */
 export const siteLinks = {
-  phonePrimary: '+919810012345',
-  phoneSecondary: '+911145678900',
-  phoneDisplay: '+91 98100 12345 / +91 11 4567 8900',
+  phonePrimary: '+918696924806',
+  phoneDisplay: '+91-8696924806',
   email: 'booking@vipaholidays.com',
-  whatsapp: 'https://wa.me/919810012345',
+  whatsapp: 'https://wa.me/918696924806',
   facebook: 'https://www.facebook.com/',
   instagram: 'https://www.instagram.com/',
   youtube: 'https://www.youtube.com/',
