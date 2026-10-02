@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { X, Send, CheckCircle, Sparkles, User, Mail, Phone, Calendar, Users, MessageCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useLanguage } from '../context/LanguageContext';
+import { siteLinks } from '../data/siteLinks';
 
 export default function BookingModal({ preselectedPackage, onClose }) {
   const { lang, t } = useLanguage();
@@ -31,7 +32,7 @@ export default function BookingModal({ preselectedPackage, onClose }) {
   const handleWhatsAppClick = () => {
     const message = `Hello Vipa Holidays! I would like to request a custom quote for a Rajasthan tour: ${formData.package}. Name: ${formData.name || 'Traveler'}, Date: ${formData.date || 'TBD'}, Guests: ${formData.guests}. Please provide details!`;
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/918696924806?text=${encoded}`, '_blank');
+    window.open(`${siteLinks.whatsapp}?text=${encoded}`, '_blank', 'noopener,noreferrer');
   };
 
   return (

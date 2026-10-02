@@ -97,7 +97,7 @@ function servicesReply(lang) {
 function contactReply(lang) {
   const c = chatbotContent[lang].prompts;
   const info = translations[lang]?.contact?.info || translations.en.contact.info;
-  return `${c.contactIntro}\n\n• ${info.phoneTitle}: ${info.phone}\n• ${info.emailTitle}: ${info.email}\n• ${info.addressTitle}: ${info.address}\n• ${info.hoursTitle}: ${info.hours}\n• WhatsApp: ${siteLinks.phonePrimary}`;
+  return `${c.contactIntro}\n\n• ${info.phoneTitle}: ${info.phone}\n• ${info.emailTitle}: ${info.email}\n• ${info.addressTitle}: ${info.address}\n• ${info.hoursTitle}: ${info.hours}\n• WhatsApp: ${siteLinks.phoneDisplay}`;
 }
 
 function knowledgeReply(text, lang) {
