@@ -3,7 +3,6 @@ export const siteLinks = {
   phonePrimary: '+918696924806',
   phoneDisplay: '+91-8696924806',
   email: 'vipaholidays@gmail.com',
-  inboxEmail: 'vipaholidays@gmail.com',
   whatsapp: 'https://wa.me/918696924806',
   facebook: 'https://www.facebook.com/',
   instagram: 'https://www.instagram.com/',

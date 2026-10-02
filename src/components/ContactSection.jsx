@@ -2,27 +2,34 @@ import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { siteLinks } from '../data/siteLinks';
-import { submitContactForm } from '../utils/submitContactForm';
+import { dispatchWhatsAppInquiry } from '../utils/whatsappInquiry';
 
 export default function ContactSection() {
-  const { t } = useLanguage();
+  const { lang, t } = useLanguage();
   const [sent, setSent] = useState(false);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState('');
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
 
-  const handleContactSubmit = async (e) => {
+  const handleContactSubmit = (e) => {
     e.preventDefault();
     setError('');
     setSending(true);
 
     try {
-      await submitContactForm(formData);
+      dispatchWhatsAppInquiry({
+        type: 'contact',
+        name: formData.name,
+        phone: formData.phone,
+        email: formData.email,
+        notes: formData.message,
+        lang,
+      });
       setSent(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
       setTimeout(() => setSent(false), 6000);
-    } catch (err) {
-      setError(err.message || t('contact.form.error'));
+    } catch {
+      setError(t('contact.form.error'));
     } finally {
       setSending(false);
     }

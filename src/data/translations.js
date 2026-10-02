@@ -81,7 +81,7 @@ export const translations = {
       specialRequestsPlaceholder: "e.g. 5-star hotel, vegetarian food, honeymoon setup, extra sightseeing...",
       submitBtn: "Request Custom Quote",
       whatsAppBtn: "Instant WhatsApp Inquiry",
-      successMsg: "Thank you! Your quote inquiry has been submitted. Our travel expert will call you shortly with the best customized deal.",
+      successMsg: "WhatsApp has opened with your quote details. Tap Send in WhatsApp and our Jodhpur desk will reply with your custom Rajasthan package.",
       orText: "OR"
     },
     destinationsShowcase: {
@@ -165,9 +165,9 @@ export const translations = {
         phone: "Mobile Number",
         message: "Tell us about your trip plans...",
         send: "Send Quote Request",
-        sending: "Sending your message...",
-        success: "Message sent successfully! We will contact you shortly at vipaholidays@gmail.com.",
-        error: "Could not send your message. Please try WhatsApp or call us directly."
+        sending: "Opening WhatsApp...",
+        success: "WhatsApp has opened with your message. Tap Send in WhatsApp to reach us on +91-8696924806.",
+        error: "Could not open WhatsApp. Please call us directly."
       }
     },
     faq: {
@@ -289,7 +289,7 @@ export const translations = {
       specialRequestsPlaceholder: "जैसे स्टूडेंट ग्रुप, डेजर्ट कैंप, तेंदुआ सफारी, शाकाहारी भोजन...",
       submitBtn: "कोटेशन अनुरोध भेजें",
       whatsAppBtn: "व्हाट्सएप पर तुरंत संपर्क करें",
-      successMsg: "धन्यवाद! आपका कोटेशन अनुरोध भेज दिया गया है। हमारे यात्रा विशेषज्ञ जल्द ही आपको सर्वोत्तम डील के साथ कॉल करेंगे।",
+      successMsg: "WhatsApp आपके कोटेशन विवरण के साथ खुल गया है। WhatsApp में Send दबाएं — हमारी जोधपुर टीम जवाब देगी।",
       orText: "अथवा"
     },
     destinationsShowcase: {
@@ -373,9 +373,9 @@ export const translations = {
         phone: "मोबाइल नंबर",
         message: "अपनी यात्रा योजनाओं के बारे में बताएं...",
         send: "कोटेशन अनुरोध भेजें",
-        sending: "आपका संदेश भेजा जा रहा है...",
-        success: "संदेश सफलतापूर्वक भेजा गया! हम जल्द vipaholidays@gmail.com पर जवाब देंगे।",
-        error: "संदेश नहीं भेजा जा सका। कृपया व्हाट्सएप या कॉल करें।"
+        sending: "WhatsApp खुल रहा है...",
+        success: "WhatsApp आपके संदेश के साथ खुल गया है। Send दबाएं — +91-8696924806 पर पहुँचेगा।",
+        error: "WhatsApp नहीं खुल पाया। कृपया सीधे कॉल करें।"
       }
     },
     faq: {

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { X, Send, CheckCircle, Sparkles, User, Mail, Phone, Calendar, Users, MessageCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { useLanguage } from '../context/LanguageContext';
-import { siteLinks } from '../data/siteLinks';
+import { dispatchWhatsAppInquiry } from '../utils/whatsappInquiry';
 
 export default function BookingModal({ preselectedPackage, onClose }) {
   const { lang, t } = useLanguage();
@@ -18,8 +18,23 @@ export default function BookingModal({ preselectedPackage, onClose }) {
     notes: ''
   });
 
+  const openQuoteWhatsApp = () => {
+    dispatchWhatsAppInquiry({
+      type: 'booking',
+      name: formData.name.trim() || 'Traveler',
+      phone: formData.phone.trim(),
+      email: formData.email.trim(),
+      destination: formData.package,
+      travelDate: formData.date || (lang === 'hi' ? 'तय नहीं' : 'TBD'),
+      guests: formData.guests,
+      notes: formData.notes,
+      lang,
+    });
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    openQuoteWhatsApp();
     setSubmitted(true);
 
     confetti({
@@ -30,9 +45,7 @@ export default function BookingModal({ preselectedPackage, onClose }) {
   };
 
   const handleWhatsAppClick = () => {
-    const message = `Hello Vipa Holidays! I would like to request a custom quote for a Rajasthan tour: ${formData.package}. Name: ${formData.name || 'Traveler'}, Date: ${formData.date || 'TBD'}, Guests: ${formData.guests}. Please provide details!`;
-    const encoded = encodeURIComponent(message);
-    window.open(`${siteLinks.whatsapp}?text=${encoded}`, '_blank', 'noopener,noreferrer');
+    openQuoteWhatsApp();
   };
 
   return (

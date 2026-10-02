@@ -11,6 +11,7 @@ export function dispatchWhatsAppInquiry(payload) {
     type = 'booking',
     name,
     phone,
+    email = '',
     destination = '',
     travelDate = '',
     guests = '',
@@ -21,13 +22,17 @@ export function dispatchWhatsAppInquiry(payload) {
 
   const isHi = lang === 'hi';
   const header =
-    type === 'callback'
+    type === 'contact'
       ? isHi
-        ? '🔔 *वीपा हॉलिडेज — कॉलबैक अनुरोध*'
-        : '🔔 *Vipa Holidays — Callback Request*'
-      : isHi
-        ? '📋 *वीपा हॉलिडेज — बुकिंग / कोटेशन अनुरोध*'
-        : '📋 *Vipa Holidays — Booking / Quote Request*';
+        ? '💬 *वीपा हॉलिडेज — वेबसाइट संदेश*'
+        : '💬 *Vipa Holidays — Website Contact Message*'
+      : type === 'callback'
+        ? isHi
+          ? '🔔 *वीपा हॉलिडेज — कॉलबैक अनुरोध*'
+          : '🔔 *Vipa Holidays — Callback Request*'
+        : isHi
+          ? '📋 *वीपा हॉलिडेज — बुकिंग / कोटेशन अनुरोध*'
+          : '📋 *Vipa Holidays — Booking / Quote Request*';
 
   const lines = [
     header,
@@ -35,6 +40,10 @@ export function dispatchWhatsAppInquiry(payload) {
     isHi ? `नाम: ${name}` : `Name: ${name}`,
     isHi ? `मोबाइल: ${phone}` : `Mobile: ${phone}`,
   ];
+
+  if (email) {
+    lines.push(isHi ? `ईमेल: ${email}` : `Email: ${email}`);
+  }
 
   if (destination) {
     lines.push(isHi ? `गंतव्य / पैकेज: ${destination}` : `Destination / Package: ${destination}`);
