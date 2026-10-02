@@ -7,7 +7,7 @@ export default function AboutSection() {
 
   const stats = [
     { count: '15,000+', label: t('stats.items.0.label') || 'Happy Travelers' },
-    { count: '100+', label: t('stats.items.1.label') || 'Indian Destinations' },
+    { count: '4', label: t('stats.items.1.label') || 'Rajasthan Packages' },
     { count: '99%', label: t('stats.items.2.label') || 'Satisfaction Rate' },
     { count: '12+', label: t('stats.items.3.label') || 'Years of Trust' },
   ];

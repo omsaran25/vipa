@@ -36,7 +36,7 @@ export default function DestinationShowcase({ onSelectDestination }) {
       name: { en: 'Student Group Tours', hi: 'स्टूडेंट ग्रुप टूर' },
       state: { en: 'Students', hi: 'स्टूडेंट्स' },
       query: 'Student',
-      image: 'https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1602643163983-ed0babc397d6?auto=format&fit=crop&w=800&q=80',
       badge: 'STUDENTS'
     }
   ];

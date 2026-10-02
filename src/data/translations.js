@@ -21,7 +21,7 @@ export const translations = {
       subtitle: "Rajasthan-only tour packages from our Jodhpur office. Jodhpur–Jaisalmer (3 nights / 4 days), Jodhpur–Jawai (2 nights / 3 days), group tours, and student group tours with local guides.",
       searchBox: {
         destination: "Where in Rajasthan?",
-        destinationPlaceholder: "e.g. Jodhpur, Jaisalmer, Jawai",
+        destinationPlaceholder: "Jodhpur, Jaisalmer",
         travelDate: "Travel Date",
         guests: "Travelers",
         guestsPlaceholder: "2 Guests",
@@ -232,7 +232,7 @@ export const translations = {
       subtitle: "हमारे जोधपुर कार्यालय से केवल राजस्थान टूर पैकेज। जोधपुर–जैसलमेर (3 रात / 4 दिन), जोधपुर–जवाई (2 रात / 3 दिन), ग्रुप टूर और स्टूडेंट ग्रुप टूर।",
       searchBox: {
         destination: "राजस्थान में कहां?",
-        destinationPlaceholder: "जैसे जोधपुर, जैसलमेर, जवाई",
+        destinationPlaceholder: "जोधपुर, जैसलमेर",
         travelDate: "यात्रा की तिथि",
         guests: "यात्रियों की संख्या",
         guestsPlaceholder: "2 यात्री",
