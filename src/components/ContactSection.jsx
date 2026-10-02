@@ -173,7 +173,7 @@ export default function ContactSection() {
                   <textarea
                     rows="4"
                     required
-                    placeholder="Describe your travel dates, preferred Indian destination, or family requirements..."
+                    placeholder="Travel dates, group size, or the Rajasthan package you want..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"

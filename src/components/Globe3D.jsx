@@ -17,12 +17,11 @@ function latLongToVector3(lat, lon, radius = 2) {
 
 // Major destinations with coordinates
 const destinationPins = [
-  { name: 'Delhi', lat: 28.6139, lon: 77.2090, label: 'HQ Delhi 🇮🇳' },
-  { name: 'Maldives', lat: 3.2028, lon: 73.2207, label: 'Maldives 🇲🇻' },
-  { name: 'Dubai', lat: 25.2048, lon: 55.2708, label: 'Dubai 🇦🇪' },
-  { name: 'Paris', lat: 48.8566, lon: 2.3522, label: 'Paris 🇫🇷' },
-  { name: 'Bali', lat: -8.4095, lon: 115.1889, label: 'Bali 🇮🇩' },
-  { name: 'Kashmir', lat: 34.0837, lon: 74.7973, label: 'Kashmir 🏔️' }
+  { name: 'Jodhpur', lat: 26.2389, lon: 73.0243, label: 'Jodhpur Office' },
+  { name: 'Jaisalmer', lat: 26.9157, lon: 70.9083, label: 'Jaisalmer' },
+  { name: 'Jawai', lat: 25.1025, lon: 73.1550, label: 'Jawai' },
+  { name: 'Jaipur', lat: 26.9124, lon: 75.7873, label: 'Jaipur' },
+  { name: 'Udaipur', lat: 24.5854, lon: 73.7125, label: 'Udaipur' }
 ];
 
 // 3D Flight Arc Line between two points
@@ -133,7 +132,7 @@ function EarthSphere({ activePin, setActivePin }) {
         );
       })}
 
-      {/* Flight Arc Trajectories from Delhi */}
+      {/* Routes from the Jodhpur office */}
       {destinationPins.slice(1).map((dest) => (
         <FlightArc key={dest.name} start={destinationPins[0]} end={dest} />
       ))}

@@ -8,7 +8,7 @@ export default function AboutSection() {
 
   const stats = [
     { count: '15,000+', label: t('stats.items.0.label') || 'Happy Travelers' },
-    { count: '100+', label: t('stats.items.1.label') || 'Indian Destinations' },
+    { count: '4', label: t('stats.items.1.label') || 'Rajasthan Packages' },
     { count: '99%', label: t('stats.items.2.label') || 'Satisfaction Rate' },
     { count: '12+', label: t('stats.items.3.label') || 'Years of Trust' },
   ];
@@ -24,8 +24,8 @@ export default function AboutSection() {
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
                 <img
-                  src="https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=600&q=80"
-                  alt="Kashmir Valley"
+                  src="https://images.unsplash.com/photo-1602643163983-ed0babc397d6?auto=format&fit=crop&w=600&q=80"
+                  alt="Jodhpur Blue City"
                   className="rounded-3xl object-cover h-64 w-full shadow-lg border border-slate-200 dark:border-slate-800"
                   onError={handleImageError}
                 />
@@ -45,8 +45,8 @@ export default function AboutSection() {
                   onError={handleImageError}
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=600&q=80"
-                  alt="Ladakh Lake"
+                  src="https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=600&q=80"
+                  alt="Jawai leopard country"
                   className="rounded-3xl object-cover h-64 w-full shadow-lg border border-slate-200 dark:border-slate-800"
                   onError={handleImageError}
                 />

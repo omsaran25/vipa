@@ -25,9 +25,10 @@ export default function DestinationShowcase({ onSelectDestination }) {
       badge: 'TOP CHOICE'
     },
     {
-      id: 'dest-rajasthan',
-      name: { en: 'Royal Forts of Rajasthan', hi: 'राजस्थान के शाही किले' },
-      state: { en: 'Rajasthan', hi: 'राजस्थान' },
+      id: 'dest-group',
+      name: { en: 'Rajasthan Group Tours', hi: 'राजस्थान ग्रुप टूर' },
+      state: { en: 'Group Tours', hi: 'ग्रुप टूर' },
+      query: 'Rajasthan Group',
       image: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80',
       query: 'Rajasthan',
       badge: 'HERITAGE'
@@ -87,7 +88,7 @@ export default function DestinationShowcase({ onSelectDestination }) {
               {/* Bottom Content */}
               <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-1 text-white">
                 <span className="text-xs text-teal-300 font-bold tracking-widest uppercase">
-                  {dest.state[lang]} • India
+                  {dest.state[lang]} • Rajasthan
                 </span>
                 <h3 className="text-xl font-black font-outfit line-clamp-1 group-hover:text-teal-200 transition-colors">
                   {dest.name[lang]}

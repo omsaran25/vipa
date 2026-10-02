@@ -9,7 +9,7 @@ export default function PackagesSection({ searchFilters, onSelectPackage, onQuic
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [searchQuery, setSearchQuery] = useState('');
 
-  const categoryKeys = ['all', 'himalayas', 'south', 'heritage', 'beaches'];
+  const categoryKeys = ['all', 'desert', 'wildlife', 'groups', 'students'];
 
   useEffect(() => {
     if (searchFilters?.destination) {
@@ -19,12 +19,7 @@ export default function PackagesSection({ searchFilters, onSelectPackage, onQuic
 
   const filteredPackages = useMemo(() => {
     return packagesData.filter((pkg) => {
-      if (selectedCategory !== 'all') {
-        if (selectedCategory === 'himalayas' && pkg.region !== 'himalayas') return false;
-        if (selectedCategory === 'south' && pkg.region !== 'south') return false;
-        if (selectedCategory === 'heritage' && pkg.region !== 'heritage') return false;
-        if (selectedCategory === 'beaches' && pkg.region !== 'beaches') return false;
-      }
+      if (selectedCategory !== 'all' && pkg.region !== selectedCategory) return false;
 
       const query = (searchQuery || searchFilters?.destination || '').toLowerCase().trim();
       if (query) {
@@ -84,7 +79,7 @@ export default function PackagesSection({ searchFilters, onSelectPackage, onQuic
             <Search className="w-4 h-4 text-slate-400 absolute left-3 top-3" />
             <input
               type="text"
-              placeholder="Search Indian destination..."
+              placeholder="Search Jodhpur, Jaisalmer, Jawai..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-3 py-2 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-2xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
@@ -107,7 +102,7 @@ export default function PackagesSection({ searchFilters, onSelectPackage, onQuic
           </div>
         ) : (
           <div className="py-16 text-center bg-white dark:bg-slate-900 rounded-3xl border border-slate-200 dark:border-slate-800 shadow-sm">
-            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">No Indian packages found matching your query.</p>
+            <p className="text-slate-500 dark:text-slate-400 text-sm font-medium">No Rajasthan packages found matching your query.</p>
             <button
               onClick={() => {
                 setSelectedCategory('all');

@@ -2,9 +2,9 @@ export const translations = {
   en: {
     nav: {
       brand: "Vipa Holidays",
-      tagline: "Explore Incredible India",
+      tagline: "Rajasthan Tour Specialists",
       home: "Home",
-      packages: "India Packages",
+      packages: "Rajasthan Packages",
       destinations: "Destinations",
       services: "Services",
       about: "About Us",
@@ -14,14 +14,14 @@ export const translations = {
       lang: "हिंदी"
     },
     hero: {
-      badge: "✨ India's Premier Tour & Travel Concierge",
-      titlePrefix: "Discover Incredible India With",
+      badge: "✨ Jodhpur-Based Rajasthan Tour Desk",
+      titlePrefix: "Explore Royal Rajasthan With",
       titleHighlight: "Vipa Holidays",
-      titleSuffix: "Crafting Unforgettable Indian Journeys",
-      subtitle: "Explore breathtaking Indian destinations from Himalayan peaks and Kashmir valleys to Kerala backwaters and Royal Rajasthan. Fully customized tour packages with 24/7 VIP assistance.",
+      titleSuffix: "Jodhpur, Jaisalmer & Jawai Journeys",
+      subtitle: "Rajasthan-only tour packages from our Jodhpur office. Jodhpur–Jaisalmer (3 nights / 4 days), Jodhpur–Jawai (2 nights / 3 days), group tours, and student group tours with local guides.",
       searchBox: {
-        destination: "Where in India?",
-        destinationPlaceholder: "e.g. Kashmir, Kerala, Goa, Ladakh",
+        destination: "Where in Rajasthan?",
+        destinationPlaceholder: "Jodhpur, Jaisalmer",
         travelDate: "Travel Date",
         guests: "Travelers",
         guestsPlaceholder: "2 Guests",
@@ -31,21 +31,21 @@ export const translations = {
       },
       stats: {
         travelers: "15,000+ Happy Travelers",
-        destinations: "100+ Indian Destinations",
+        destinations: "Rajasthan Circuits Only",
         rating: "4.9/5 Rating (2.4k+ Reviews)",
         support: "24/7 VIP Concierge"
       }
     },
     packages: {
-      tag: "Handcrafted Indian Experiences",
-      title: "Popular India Tour Packages",
-      subtitle: "Choose from our curated collection of domestic Indian holiday packages with verified luxury stays and expert local guides.",
+      tag: "Rajasthan Tour Packages",
+      title: "Rajasthan Tour Packages",
+      subtitle: "Jodhpur–Jaisalmer, Jodhpur–Jawai, group departures, and student group tours. Every package stays inside Rajasthan.",
       categories: {
-        all: "All India Packages",
-        himalayas: "Himalayas & North",
-        south: "South & Backwaters",
-        heritage: "Royal Heritage",
-        beaches: "Beaches & Islands"
+        all: "All Rajasthan Packages",
+        desert: "Jodhpur & Jaisalmer",
+        wildlife: "Jodhpur & Jawai",
+        groups: "Group Tours",
+        students: "Student Group Tours"
       },
       card: {
         customizable: "Fully Customizable",
@@ -67,13 +67,13 @@ export const translations = {
     },
     booking: {
       title: "Get Your Custom Package Quote",
-      subtitle: "Fill out the inquiry form below and our Indian travel specialists will send you a personalized itinerary with best rates within 15 minutes.",
+      subtitle: "Fill out the inquiry form and our Jodhpur travel desk will send a Rajasthan itinerary with the best rates.",
       fullName: "Full Name",
       fullNamePlaceholder: "Rahul Sharma",
       email: "Email Address",
       emailPlaceholder: "rahul@example.com",
       phone: "Phone / WhatsApp Number",
-      phonePlaceholder: "+91 98765 43210",
+      phonePlaceholder: "+91 86969 24806",
       destination: "Selected Package / Destination",
       travelDate: "Preferred Departure Date",
       travelers: "Number of Guests",
@@ -85,43 +85,43 @@ export const translations = {
       orText: "OR"
     },
     destinationsShowcase: {
-      tag: "Trending Hotspots",
-      title: "Explore Incredible India",
-      subtitle: "Spotlight on top picked Indian destinations with iconic sightseeing, cultural experiences, and personalized deals.",
+      tag: "Rajasthan Highlights",
+      title: "Explore Rajasthan With Us",
+      subtitle: "Blue City Jodhpur, Golden City Jaisalmer, Jawai leopard country, and ready-made group and student departures.",
       exploreMore: "View Packages"
     },
     services: {
       tag: "Why Choose Us",
       title: "Our Premium Travel Services",
-      subtitle: "Everything you need for a memorable Indian vacation under one roof.",
+      subtitle: "Rajasthan holidays planned from our Jodhpur office — forts, dunes, wildlife, and group travel.",
       items: [
         {
-          title: "Customized Holiday Packages",
-          desc: "Tailor-made itineraries designed to match your budget, pace, and interests across India."
+          title: "Rajasthan Holiday Packages",
+          desc: "Jodhpur–Jaisalmer (3 nights / 4 days) and Jodhpur–Jawai (2 nights / 3 days), built around your dates."
         },
         {
           title: "VIP Cab & Tempo Transfers",
           desc: "Private AC sedans, SUVs, and luxury Tempo Travelers with professional local drivers."
         },
         {
-          title: "Luxury Resorts & Houseboats",
-          desc: "Handpicked 4-Star & 5-Star hotels, heritage havelis, and luxury Kashmir & Kerala houseboats."
+          title: "Havelis, Hotels & Desert Camps",
+          desc: "Heritage stays in Jodhpur and Jaisalmer, plus Sam dune camps and Jawai lodges."
         },
         {
-          title: "Adventure & Desert Safaris",
-          desc: "Thar desert camel safaris, Solang valley paragliding, and Andaman scuba diving expeditions."
+          title: "Camel & Leopard Safaris",
+          desc: "Sam Sand Dunes camel safari and Jawai leopard safaris for couples, groups, and students."
         },
         {
-          title: "24/7 Travel Concierge",
-          desc: "Dedicated personal assistant on call throughout your journey for complete peace of mind."
+          title: "Group & Student Tours",
+          desc: "Fixed departures for families and offices, plus supervised heritage circuits for schools and colleges."
         }
       ]
     },
     about: {
       tag: "About Vipa Holidays",
-      title: "Showcasing The Soul Of India Since 2014",
-      desc1: "Vipa Holidays is a premier travel management company dedicated to curating extraordinary Indian holiday experiences across every corner of the country.",
-      desc2: "From the snow-clad mountains of Kashmir & Ladakh and royal forts of Rajasthan to the serene Kerala backwaters and tropical beaches of Goa & Andaman, we turn your dream Indian holiday into reality.",
+      title: "Rajasthan Journeys Planned From Jodhpur",
+      desc1: "Vipa Holidays is a Jodhpur travel desk that plans Rajasthan tours only — forts, desert camps, and wildlife safaris with local guides.",
+      desc2: "Ask for the Jodhpur–Jaisalmer package (3 nights / 4 days), the Jodhpur–Jawai package (2 nights / 3 days), a group departure, or a student group tour.",
       features: [
         "100% Transparent Quotes - Zero Hidden Charges",
         "Verified 4-Star & 5-Star Hotel & Resort Partners",
@@ -134,7 +134,7 @@ export const translations = {
     stats: {
       items: [
         { count: "15,000+", label: "Happy Travelers" },
-        { count: "100+", label: "Indian Destinations" },
+        { count: "4", label: "Rajasthan Packages" },
         { count: "99%", label: "Satisfaction Rate" },
         { count: "12+", label: "Years of Trust" }
       ]
@@ -142,20 +142,21 @@ export const translations = {
     testimonials: {
       tag: "Real Stories",
       title: "What Our Travelers Say",
-      subtitle: "Read authentic feedback from families, couples, and group travelers who explored India with Vipa Holidays."
+      subtitle: "Families, student groups, and friends who travelled Rajasthan with Vipa Holidays."
     },
     contact: {
       tag: "Get in Touch",
-      title: "Plan Your Indian Journey With Us",
-      subtitle: "Have questions or need a customized tour quote? Reach out to our travel specialists today.",
+      title: "Plan Your Rajasthan Journey With Us",
+      subtitle: "Call, WhatsApp, or email our Jodhpur office for a Rajasthan tour quote.",
       info: {
-        addressTitle: "Headquarters",
-        address: "Vipa Holidays Tower, Connaught Place, Inner Circle, New Delhi - 110001",
-        mumbaiOffice: "Regional Branch: Bandra Kurla Complex, Mumbai - 400051",
-        phoneTitle: "Direct Helpline",
-        phone: "+91 98100 12345 / +91 11 4567 8900",
+        addressTitle: "Office Address",
+        address: "Plot No. 62, BJS Colony, ZSA, Jodhpur, Rajasthan",
+        mumbaiOffice: "Vipa Holidays — Jodhpur Office",
+        phoneTitle: "Mobile Numbers",
+        phone: "+91 86969 24806",
+        phoneSecondary: "+91 87644 81101",
         emailTitle: "Email Us",
-        email: "booking@vipaholidays.com",
+        email: "vipaholidays@gmail.com",
         hoursTitle: "Working Hours",
         hours: "Mon - Sat: 9:00 AM - 8:30 PM (IST)"
       },
@@ -173,8 +174,8 @@ export const translations = {
       title: "Frequently Asked Questions",
       items: [
         {
-          q: "How do I request a custom quote with Vipa Holidays?",
-          a: "Select your preferred Indian tour package and click 'Get Custom Quote', fill out the inquiry form, or contact our 24/7 travel helpline via call or WhatsApp. Our specialists will send a detailed quote within 15 minutes."
+          q: "How do I request a Rajasthan tour quote?",
+          a: "Choose a package and click Get Custom Quote, or call / WhatsApp +91 86969 24806 and +91 87644 81101. You can also email vipaholidays@gmail.com."
         },
         {
           q: "Can I customize the itinerary according to my family schedule?",
@@ -182,7 +183,7 @@ export const translations = {
         },
         {
           q: "What is included in your custom packages?",
-          a: "Our packages typically include 4-Star/5-Star accommodations, daily breakfast & dinner, private AC vehicle transfers, sightseeing entry permits, houseboat cruises, and 24/7 concierge support."
+          a: "Packages include hotel or desert-camp stays, meals as listed, AC transfers, a local guide, and sightseeing such as forts, Sam camel safari, or a Jawai leopard safari. Student tours use group hotels and a supervised coach."
         },
         {
           q: "Do you offer EMI or flexible payment plans for tour packages?",
@@ -195,11 +196,11 @@ export const translations = {
       ]
     },
     footer: {
-      desc: "Vipa Holidays is India's leading tour and travel company offering curated domestic holiday packages across Kashmir, Kerala, Rajasthan, Goa, Himachal, Ladakh & Andaman with 24/7 VIP assistance.",
+      desc: "Vipa Holidays plans Rajasthan tours from Plot No. 62, BJS Colony, ZSA, Jodhpur — Jodhpur, Jaisalmer, Jawai, group tours, and student group tours.",
       quickLinks: "Quick Links",
-      popularDestinations: "Top Indian Spots",
-      newsletterTitle: "Subscribe for Exclusive Deals",
-      newsletterDesc: "Get up to 25% discount on early bird holiday bookings across India.",
+      popularDestinations: "Rajasthan Packages",
+      newsletterTitle: "Subscribe for Rajasthan Deals",
+      newsletterDesc: "Group departures and early-bird rates for Jodhpur, Jaisalmer, and Jawai.",
       subscribePlaceholder: "Enter your email",
       subscribeBtn: "Subscribe",
       rights: "All Rights Reserved. Designed with ❤️ by Vipa Holidays."
@@ -208,9 +209,9 @@ export const translations = {
   hi: {
     nav: {
       brand: "वीपा हॉलिडेज",
-      tagline: "अतुल्य भारत की सैर करें",
+      tagline: "राजस्थान टूर विशेषज्ञ",
       home: "होम",
-      packages: "भारत टूर पैकेज",
+      packages: "राजस्थान पैकेज",
       destinations: "गंतव्य",
       services: "सेवाएं",
       about: "हमारे बारे में",
@@ -220,14 +221,14 @@ export const translations = {
       lang: "English"
     },
     hero: {
-      badge: "✨ भारत की प्रमुख टूर और ट्रेवल एजेंसी",
-      titlePrefix: "अतुल्य भारत की खोज करें",
+      badge: "✨ जोधपुर स्थित राजस्थान टूर डेस्क",
+      titlePrefix: "शाही राजस्थान की सैर करें",
       titleHighlight: "वीपा हॉलिडेज",
-      titleSuffix: "के साथ यादगार यात्राएं",
-      subtitle: "हिमालय की चोटियों और कश्मीर की घाटियों से लेकर केरल के बैकवाटर और शाही राजस्थान तक भारत के सुंदर स्थानों की सैर करें। 24/7 वीआईपी सहायता के साथ 100% कस्टमाइज्ड पैकेज।",
+      titleSuffix: "के साथ जोधपुर, जैसलमेर और जवाई",
+      subtitle: "हमारे जोधपुर कार्यालय से केवल राजस्थान टूर पैकेज। जोधपुर–जैसलमेर (3 रात / 4 दिन), जोधपुर–जवाई (2 रात / 3 दिन), ग्रुप टूर और स्टूडेंट ग्रुप टूर।",
       searchBox: {
-        destination: "भारत में कहां जाना चाहते हैं?",
-        destinationPlaceholder: "जैसे कश्मीर, केरल, गोवा, लद्दाख",
+        destination: "राजस्थान में कहां?",
+        destinationPlaceholder: "जोधपुर, जैसलमेर",
         travelDate: "यात्रा की तिथि",
         guests: "यात्रियों की संख्या",
         guestsPlaceholder: "2 यात्री",
@@ -237,21 +238,21 @@ export const translations = {
       },
       stats: {
         travelers: "15,000+ खुशहाल यात्री",
-        destinations: "100+ भारतीय गंतव्य",
+        destinations: "केवल राजस्थान सर्किट",
         rating: "4.9/5 रेटिंग (2.4k+ समीक्षाएं)",
         support: "24/7 वीआईपी गाइडेंस"
       }
     },
     packages: {
-      tag: "खास भारतीय अनुभव",
-      title: "लोकप्रिय भारत टूर पैकेज",
-      subtitle: "सत्यापित लक्जरी स्टे और स्थानीय टूर गाइडों के साथ हमारे घरेलू भारतीय छुट्टियों के पैकेजों के संग्रह में से चुनें।",
+      tag: "राजस्थान टूर पैकेज",
+      title: "राजस्थान टूर पैकेज",
+      subtitle: "जोधपुर–जैसलमेर, जोधपुर–जवाई, ग्रुप डिपार्चर और स्टूडेंट ग्रुप टूर। हर पैकेज राजस्थान के अंदर है।",
       categories: {
-        all: "सभी भारत पैकेज",
-        himalayas: "हिमालय और उत्तर",
-        south: "दक्षिण और बैकवाटर",
-        heritage: "शाही हेरिटेज",
-        beaches: "बीच और द्वीप"
+        all: "सभी राजस्थान पैकेज",
+        desert: "जोधपुर और जैसलमेर",
+        wildlife: "जोधपुर और जवाई",
+        groups: "ग्रुप टूर",
+        students: "स्टूडेंट ग्रुप टूर"
       },
       card: {
         customizable: "100% कस्टमाइज़ योग्य",
@@ -273,61 +274,61 @@ export const translations = {
     },
     booking: {
       title: "अपना कस्टम पैकेज कोटेशन पाएं",
-      subtitle: "नीचे दिया गया फॉर्म भरें और हमारे भारतीय यात्रा विशेषज्ञ 15 मिनट के भीतर सर्वोत्तम दरों के साथ आपसे संपर्क करेंगे।",
+      subtitle: "फॉर्म भरें और हमारा जोधपुर टूर डेस्क राजस्थान यात्रा कार्यक्रम के साथ आपसे संपर्क करेगा।",
       fullName: "पूरा नाम",
       fullNamePlaceholder: "राहुल शर्मा",
       email: "ईमेल पता",
       emailPlaceholder: "rahul@example.com",
       phone: "फोन / व्हाट्सएप नंबर",
-      phonePlaceholder: "+91 98765 43210",
+      phonePlaceholder: "+91 86969 24806",
       destination: "चयनित पैकेज / गंतव्य",
       travelDate: "यात्रा की पसंदीदा तारीख",
       travelers: "यात्रियों की संख्या",
       specialRequests: "विशेष बदलाव व प्राथमिकताएं",
-      specialRequestsPlaceholder: "जैसे 5-स्टार होटल, शाकाहारी भोजन, हनीमून सेटअप...",
+      specialRequestsPlaceholder: "जैसे स्टूडेंट ग्रुप, डेजर्ट कैंप, तेंदुआ सफारी, शाकाहारी भोजन...",
       submitBtn: "कोटेशन अनुरोध भेजें",
       whatsAppBtn: "व्हाट्सएप पर तुरंत संपर्क करें",
       successMsg: "धन्यवाद! आपका कोटेशन अनुरोध भेज दिया गया है। हमारे यात्रा विशेषज्ञ जल्द ही आपको सर्वोत्तम डील के साथ कॉल करेंगे।",
       orText: "अथवा"
     },
     destinationsShowcase: {
-      tag: "ट्रेंडिंग स्थान",
-      title: "अतुल्य भारत की सैर करें",
-      subtitle: "आइकॉनिक दर्शनीय स्थलों, सांस्कृतिक अनुभवों और व्यक्तिगत डीलों के साथ भारत के शीर्ष स्थानों की खोज करें।",
+      tag: "राजस्थान Highlights",
+      title: "हमारे साथ राजस्थान देखें",
+      subtitle: "ब्लू सिटी जोधपुर, गोल्डन सिटी जैसलमेर, जवाई तेंदुआ क्षेत्र, और तैयार ग्रुप व स्टूडेंट डिपार्चर।",
       exploreMore: "पैकेज देखें"
     },
     services: {
       tag: "हमें क्यों चुनें",
       title: "हमारी प्रीमियम यात्रा सेवाएं",
-      subtitle: "एक ही स्थान पर आपकी यादगार भारतीय छुट्टियों के लिए सब कुछ।",
+      subtitle: "जोधपुर कार्यालय से राजस्थान की छुट्टियां — किले, टिब्बे, वन्यजीव और ग्रुप यात्रा।",
       items: [
         {
-          title: "कस्टम हॉलिडे पैकेज",
-          desc: "पूरे भारत में आपके बजट और रुचियों से मेल खाने वाले कस्टमाइज़्ड यात्रा कार्यक्रम।"
+          title: "राजस्थान हॉलिडे पैकेज",
+          desc: "जोधपुर–जैसलमेर (3 रात / 4 दिन) और जोधपुर–जवाई (2 रात / 3 दिन), आपकी तारीखों के अनुसार।"
         },
         {
           title: "वीआईपी कैब और टेम्पो ट्रांसफर",
           desc: "पेशेवर स्थानीय ड्राइवरों के साथ निजी एसी सेडान, एसयूवी और टेम्पो ट्रेवलर।"
         },
         {
-          title: "लक्जरी रिसॉर्ट्स और हाउसबोट",
-          desc: "चुने गए 4-स्टार और 5-स्टार होटल, हेरिटेज हवेलियां और लक्जरी हाउसबोट स्टे।"
+          title: "हवेली, होटल और डेजर्ट कैंप",
+          desc: "जोधपुर और जैसलमेर में हेरिटेज स्टे, सैम ड्यून कैंप और जवाई लॉज।"
         },
         {
-          title: "एडवेंचर और डेजर्ट सफारी",
-          desc: "थार मरुस्थल ऊंट सफारी, सोलांग घाटी पैराग्लाइडिंग और अंडमान डाइविंग।"
+          title: "ऊंट और तेंदुआ सफारी",
+          desc: "सैम सैंड ड्यून्स ऊंट सफारी और जवाई तेंदुआ सफारी — कपल, ग्रुप और स्टूडेंट्स के लिए।"
         },
         {
-          title: "24/7 ट्रेवल कंसीयज",
-          desc: "आपकी यात्रा के दौरान समर्पित व्यक्तिगत सहायक ऑन कॉल।"
+          title: "ग्रुप और स्टूडेंट टूर",
+          desc: "परिवार और ऑफिस के लिए फिक्स्ड डिपार्चर, और स्कूल-कॉलेज के लिए निगरानी वाला हेरिटेज सर्किट।"
         }
       ]
     },
     about: {
       tag: "वीपा हॉलिडेज के बारे में",
-      title: "2014 से भारत की सुंदरता को दर्शाना",
-      desc1: "वीपा हॉलिडेज एक प्रमुख यात्रा प्रबंधन कंपनी है जो देश के हर कोने में असाधारण भारतीय छुट्टियों के अनुभव प्रदान करने के लिए समर्पित है।",
-      desc2: "कश्मीर और लद्दाख के बर्फ से ढके पहाड़ों से लेकर राजस्थान के शाही किलों, केरल के बैकवाटर और गोवा के समुद्र तटों तक, हम आपकी छुट्टियों को खास बनाते हैं।",
+      title: "जोधपुर से नियोजित राजस्थान यात्राएं",
+      desc1: "वीपा हॉलिडेज जोधपुर का टूर डेस्क है जो केवल राजस्थान टूर बनाता है — किले, डेजर्ट कैंप और स्थानीय गाइड के साथ वन्यजीव सफारी।",
+      desc2: "जोधपुर–जैसलमेर पैकेज (3 रात / 4 दिन), जोधपुर–जवाई पैकेज (2 रात / 3 दिन), ग्रुप डिपार्चर या स्टूडेंट ग्रुप टूर के लिए पूछें।",
       features: [
         "100% पारदर्शी कोटेशन - कोई छिपा हुआ शुल्क नहीं",
         "सत्यापित 4-स्टार और 5-स्टार होटल भागीदार",
@@ -340,7 +341,7 @@ export const translations = {
     stats: {
       items: [
         { count: "15,000+", label: "खुशहाल यात्री" },
-        { count: "100+", label: "भारतीय गंतव्य" },
+        { count: "4", label: "राजस्थान पैकेज" },
         { count: "99%", label: "संतुष्टि दर" },
         { count: "12+", label: "वर्षों का विश्वास" }
       ]
@@ -348,20 +349,21 @@ export const translations = {
     testimonials: {
       tag: "सच्ची कहानियां",
       title: "हमारे यात्री क्या कहते हैं",
-      subtitle: "वीपा हॉलिडेज के साथ भारत की सैर करने वाले परिवारों और जोड़ों की वास्तविक समीक्षाएं पढ़ें।"
+      subtitle: "वीपा हॉलिडेज के साथ राजस्थान घूमने वाले परिवार, स्टूडेंट ग्रुप और दोस्तों की समीक्षाएं।"
     },
     contact: {
       tag: "संपर्क करें",
-      title: "हमारे साथ अपनी भारतीय यात्रा की योजना बनाएं",
-      subtitle: "कोई सवाल है या अनुकूलित कोटेशन की आवश्यकता है? आज ही हमारे यात्रा विशेषज्ञों से संपर्क करें।",
+      title: "हमारे साथ अपनी राजस्थान यात्रा की योजना बनाएं",
+      subtitle: "राजस्थान टूर कोटेशन के लिए जोधपुर कार्यालय को कॉल, व्हाट्सएप या ईमेल करें।",
       info: {
-        addressTitle: "मुख्यालय",
-        address: "वीपा हॉलिडेज टॉवर, कनॉट्स प्लेस, इनर सर्कल, नई दिल्ली - 110001",
-        mumbaiOffice: "क्षेत्रीय शाखा: बांद्रा कुर्ला कॉम्प्लेक्स, मुंबई - 400051",
-        phoneTitle: "डायरेक्ट हेल्पलाइन",
-        phone: "+91 98100 12345 / +91 11 4567 8900",
+        addressTitle: "कार्यालय का पता",
+        address: "प्लॉट नं. 62, बीजेएस कॉलोनी, जेडएसए, जोधपुर, राजस्थान",
+        mumbaiOffice: "वीपा हॉलिडेज — जोधपुर कार्यालय",
+        phoneTitle: "मोबाइल नंबर",
+        phone: "+91 86969 24806",
+        phoneSecondary: "+91 87644 81101",
         emailTitle: "हमें ईमेल करें",
-        email: "booking@vipaholidays.com",
+        email: "vipaholidays@gmail.com",
         hoursTitle: "कार्य समय",
         hours: "सोम - शनि: सुबह 9:00 - रात 8:30 (IST)"
       },
@@ -379,8 +381,8 @@ export const translations = {
       title: "अक्सर पूछे जाने वाले प्रश्न",
       items: [
         {
-          q: "मैं वीपा हॉलिडेज से कस्टम कोटेशन कैसे प्राप्त कर सकता हूं?",
-          a: "अपने पसंदीदा भारतीय टूर पैकेज को चुनें और 'कोटेशन प्राप्त करें' पर क्लिक करें, फॉर्म भरें या कॉल/व्हाट्सएप से संपर्क करें। हमारे विशेषज्ञ 15 मिनट में विस्तृत कोटेशन भेजेंगे।"
+          q: "मैं राजस्थान टूर कोटेशन कैसे प्राप्त करूं?",
+          a: "पैकेज चुनें और कोटेशन प्राप्त करें पर क्लिक करें, या +91 86969 24806 और +91 87644 81101 पर कॉल / व्हाट्सएप करें। ईमेल vipaholidays@gmail.com पर भी लिख सकते हैं।"
         },
         {
           q: "क्या मैं अपने परिवार के शेड्यूल के अनुसार यात्रा कार्यक्रम को अनुकूलित कर सकता हूं?",
@@ -388,7 +390,7 @@ export const translations = {
         },
         {
           q: "आपके कस्टम पैकेज में क्या शामिल है?",
-          a: "हमारे पैकेजों में आम तौर पर 4-स्टार/5-स्टार होटल, दैनिक नाश्ता और रात का खाना, निजी एसी वाहन, दर्शनीय स्थल परमिट और हाउसबोट क्रूज़ शामिल हैं।"
+          a: "पैकेज में होटल या डेजर्ट कैंप, सूची के अनुसार भोजन, एसी ट्रांसफर, स्थानीय गाइड, और किले, सैम ऊंट सफारी या जवाई तेंदुआ सफारी शामिल हैं। स्टूडेंट टूर में ग्रुप होटल और निगरानी वाली कोच होती है।"
         },
         {
           q: "क्या आप टूर पैकेज पर EMI या लचीले भुगतान विकल्प देते हैं?",
@@ -401,11 +403,11 @@ export const translations = {
       ]
     },
     footer: {
-      desc: "वीपा हॉलिडेज भारत की अग्रणी टूर और ट्रेवल कंपनी है जो कश्मीर, केरल, राजस्थान, गोवा, हिमाचल, लद्दाख और अंडमान में कस्टमाइज़्ड पैकेज प्रदान करती है।",
+      desc: "वीपा हॉलिडेज प्लॉट नं. 62, बीजेएस कॉलोनी, जेडएसए, जोधपुर से राजस्थान टूर बनाता है — जोधपुर, जैसलमेर, जवाई, ग्रुप टूर और स्टूडेंट ग्रुप टूर।",
       quickLinks: "त्वरित लिंक",
-      popularDestinations: "शीर्ष भारतीय गंतव्य",
-      newsletterTitle: "विशेष डीलों के लिए सदस्यता लें",
-      newsletterDesc: "अग्रिम बुकिंग पर 25% तक की छूट पाएं।",
+      popularDestinations: "राजस्थान पैकेज",
+      newsletterTitle: "राजस्थान डीलों के लिए सदस्यता लें",
+      newsletterDesc: "जोधपुर, जैसलमेर और जवाई के ग्रुप डिपार्चर और अर्ली-बर्ड रेट।",
       subscribePlaceholder: "अपना ईमेल दर्ज करें",
       subscribeBtn: "सदस्यता लें",
       rights: "सर्वाधिकार सुरक्षित। वीपा हॉलिडेज द्वारा डिज़ाइन किया गया।"

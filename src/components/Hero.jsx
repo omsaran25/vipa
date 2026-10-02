@@ -14,10 +14,10 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
 
   const heroSpotlights = [
     {
-      title: { en: "Kashmir Snow Paradise", hi: "कश्मीर बर्फ पैराडाइज" },
-      tag: "Himalayas",
-      image: "https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80",
-      query: "Kashmir"
+      title: { en: "Jodhpur & Jaisalmer — 3N / 4D", hi: "जोधपुर और जैसलमेर — 3 रात / 4 दिन" },
+      tag: "Desert",
+      image: "https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80",
+      query: "Jaisalmer"
     },
     {
       title: { en: "Kerala Serene Backwaters", hi: "केरल शांत बैकवाटर" },
@@ -26,10 +26,10 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
       query: "Kerala"
     },
     {
-      title: { en: "Royal Forts of Rajasthan", hi: "राजस्थान के शाही किले" },
-      tag: "Heritage",
+      title: { en: "Group & Student Tours", hi: "ग्रुप और स्टूडेंट टूर" },
+      tag: "Groups",
       image: "https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80",
-      query: "Rajasthan"
+      query: "Group"
     }
   ];
 
@@ -189,7 +189,7 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
             <div className="flex items-center justify-between">
               <span className="text-xs font-bold text-teal-700 dark:text-teal-400 uppercase tracking-widest flex items-center gap-1.5">
                 <Compass className="w-4 h-4" />
-                Trending Indian Spotlights
+                Rajasthan Tour Spotlights
               </span>
               <button
                 onClick={() => onOpenBooking()}

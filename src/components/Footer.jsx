@@ -76,7 +76,7 @@ export default function Footer({ onSelectDestination }) {
             </h4>
             <ul className="space-y-2 text-xs font-medium">
               <li><a href="#home" className="hover:text-teal-400 transition-colors">Home</a></li>
-              <li><a href="#packages" className="hover:text-teal-400 transition-colors">India Tour Packages</a></li>
+              <li><a href="#packages" className="hover:text-teal-400 transition-colors">Rajasthan Tour Packages</a></li>
               <li><a href="#destinations" className="hover:text-teal-400 transition-colors">Destinations</a></li>
               <li><a href="#services" className="hover:text-teal-400 transition-colors">Services</a></li>
               <li><a href="#about" className="hover:text-teal-400 transition-colors">About Us</a></li>

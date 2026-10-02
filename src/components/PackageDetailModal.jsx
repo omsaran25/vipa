@@ -18,7 +18,7 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
         <div className="flex items-center justify-between p-5 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-950">
           <div>
             <span className="text-xs font-extrabold text-teal-700 dark:text-teal-400 uppercase tracking-widest">
-              India Tour Package • {pkg.durationDays} Days
+              Rajasthan Tour Package • {pkg.durationDays} Days
             </span>
             <h2 className="text-xl sm:text-2xl font-black text-slate-900 dark:text-white font-outfit line-clamp-1">
               {pkg.title[lang]}

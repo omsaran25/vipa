@@ -11,7 +11,7 @@ export default function BookingModal({ preselectedPackage, onClose }) {
     name: '',
     email: '',
     phone: '',
-    package: preselectedPackage ? preselectedPackage.title[lang] : 'Royal Kashmir Paradise',
+    package: preselectedPackage ? preselectedPackage.title[lang] : 'Jodhpur Jaisalmer Tour Package',
     date: '',
     guests: '2',
     notes: ''
@@ -29,9 +29,9 @@ export default function BookingModal({ preselectedPackage, onClose }) {
   };
 
   const handleWhatsAppClick = () => {
-    const message = `Hello Vipa Holidays! I would like to request a custom quote for Indian Tour: ${formData.package}. Name: ${formData.name || 'Traveler'}, Date: ${formData.date || 'TBD'}, Guests: ${formData.guests}. Please provide details!`;
+    const message = `Hello Vipa Holidays! I would like to request a custom quote for a Rajasthan tour: ${formData.package}. Name: ${formData.name || 'Traveler'}, Date: ${formData.date || 'TBD'}, Guests: ${formData.guests}. Please provide details!`;
     const encoded = encodeURIComponent(message);
-    window.open(`https://wa.me/919810012345?text=${encoded}`, '_blank');
+    window.open(`https://wa.me/918696924806?text=${encoded}`, '_blank');
   };
 
   return (
