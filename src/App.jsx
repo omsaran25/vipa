@@ -13,6 +13,7 @@ import ContactSection from './components/ContactSection';
 import Footer from './components/Footer';
 import PackageDetailModal from './components/PackageDetailModal';
 import BookingModal from './components/BookingModal';
+import TravelChatbot from './components/TravelChatbot';
 
 function AppContent() {
   const [searchFilters, setSearchFilters] = useState(null);
@@ -89,6 +90,8 @@ function AppContent() {
           onClose={() => setBookingModalOpen(false)}
         />
       )}
+
+      <TravelChatbot />
     </div>
   );
 }
