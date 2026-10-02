@@ -56,7 +56,7 @@ function AppContent() {
         <DestinationShowcase onSelectDestination={handleSelectDestination} />
 
         {/* Services Showcase */}
-        <ServicesSection />
+        <ServicesSection onOpenBooking={() => handleOpenBooking(null)} />
 
         {/* About Company & Stats */}
         <AboutSection />
@@ -72,7 +72,7 @@ function AppContent() {
       </main>
 
       {/* Footer */}
-      <Footer />
+      <Footer onSelectDestination={handleSelectDestination} />
 
       {/* Modals */}
       {activeDetailPackage && (

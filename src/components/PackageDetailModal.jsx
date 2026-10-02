@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { X, MapPin, Clock, Star, CheckCircle, XCircle, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageFallback';
 
 export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
   const { lang, t } = useLanguage();
@@ -37,7 +38,7 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
           {/* Photos */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div className="md:col-span-2 h-64 sm:h-80 rounded-2xl overflow-hidden relative shadow-md">
-              <img src={activeImage} alt={pkg.title[lang]} className="w-full h-full object-cover" />
+              <img src={activeImage} alt={pkg.title[lang]} className="w-full h-full object-cover" onError={handleImageError} />
               <div className="absolute bottom-3 left-3 bg-slate-950/80 backdrop-blur-md px-3 py-1 rounded-xl text-xs text-white font-semibold flex items-center gap-1.5">
                 <MapPin className="w-4 h-4 text-teal-400" />
                 <span>{pkg.location[lang]}</span>
@@ -55,7 +56,7 @@ export default function PackageDetailModal({ pkg, onClose, onBookNow }) {
                       activeImage === imgUrl ? 'border-teal-600 scale-95' : 'border-transparent opacity-75 hover:opacity-100'
                     }`}
                   >
-                    <img src={imgUrl} alt="gallery" className="w-full h-full object-cover" />
+                    <img src={imgUrl} alt="gallery" className="w-full h-full object-cover" onError={handleImageError} />
                   </button>
                 ))}
               </div>

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { siteLinks } from '../data/siteLinks';
 
 export default function ContactSection() {
   const { t } = useLanguage();
@@ -68,9 +69,12 @@ export default function ContactSection() {
                 <h4 className="text-base font-bold text-slate-900 dark:text-white font-outfit">
                   {t('contact.info.phoneTitle')}
                 </h4>
-                <p className="text-xs font-black text-amber-600 dark:text-amber-400">
+                <a
+                  href={`tel:${siteLinks.phonePrimary}`}
+                  className="text-xs font-black text-amber-600 dark:text-amber-400 hover:underline"
+                >
                   {t('contact.info.phone')}
-                </p>
+                </a>
                 <p className="text-[11px] text-slate-500 dark:text-slate-400 font-bold">Toll Free 24/7 VIP Travel Desk</p>
               </div>
             </div>
@@ -81,9 +85,12 @@ export default function ContactSection() {
                 <Mail className="w-5 h-5 text-indigo-600 dark:text-indigo-400 shrink-0" />
                 <div className="flex flex-col truncate">
                   <span className="text-[11px] text-slate-500 dark:text-slate-400 font-bold">Email</span>
-                  <span className="text-xs font-extrabold text-slate-900 dark:text-white truncate">
+                  <a
+                    href={`mailto:${siteLinks.email}`}
+                    className="text-xs font-extrabold text-slate-900 dark:text-white truncate hover:text-teal-600 dark:hover:text-teal-400"
+                  >
                     {t('contact.info.email')}
-                  </span>
+                  </a>
                 </div>
               </div>
 

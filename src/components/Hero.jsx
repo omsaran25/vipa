@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Search, MapPin, Calendar, Users, Star, ShieldCheck, Headphones, Award, Sparkles, ChevronRight, Compass } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageFallback';
 
 export default function Hero({ onSearchSubmit, onOpenBooking }) {
   const { lang, t } = useLanguage();
@@ -21,7 +22,7 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
     {
       title: { en: "Kerala Serene Backwaters", hi: "केरल शांत बैकवाटर" },
       tag: "God's Own Country",
-      image: "https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80",
+      image: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=800&q=80",
       query: "Kerala"
     },
     {
@@ -210,6 +211,7 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
                     src={item.image}
                     alt={item.title[lang]}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                    onError={handleImageError}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
                   

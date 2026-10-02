@@ -78,7 +78,7 @@ export const translations = {
       travelDate: "Preferred Departure Date",
       travelers: "Number of Guests",
       specialRequests: "Customization & Preferences",
-      specialRequestsPlaceholder: "e.g. Flight preference, 5-star hotel, vegetarian food, honeymoon setup...",
+      specialRequestsPlaceholder: "e.g. 5-star hotel, vegetarian food, honeymoon setup, extra sightseeing...",
       submitBtn: "Request Custom Quote",
       whatsAppBtn: "Instant WhatsApp Inquiry",
       successMsg: "Thank you! Your quote inquiry has been submitted. Our travel expert will call you shortly with the best customized deal.",
@@ -98,10 +98,6 @@ export const translations = {
         {
           title: "Customized Holiday Packages",
           desc: "Tailor-made itineraries designed to match your budget, pace, and interests across India."
-        },
-        {
-          title: "Flight & Train Ticketing",
-          desc: "Instant booking with exclusive group discounts, IRCTC rail bookings, and easy cancellations."
         },
         {
           title: "VIP Cab & Tempo Transfers",
@@ -189,8 +185,8 @@ export const translations = {
           a: "Our packages typically include 4-Star/5-Star accommodations, daily breakfast & dinner, private AC vehicle transfers, sightseeing entry permits, houseboat cruises, and 24/7 concierge support."
         },
         {
-          q: "Do you provide flight and train tickets along with land packages?",
-          a: "Yes! We offer both options: 'Land Only' packages and 'All-Inclusive Packages' including flights or IRCTC train tickets from your home city."
+          q: "Do you offer EMI or flexible payment plans for tour packages?",
+          a: "Yes. We provide flexible customized payment schedules and EMI options on select domestic packages. Your travel specialist will share eligible plans when you request a quote."
         },
         {
           q: "What is your cancellation and refund policy?",
@@ -310,10 +306,6 @@ export const translations = {
           desc: "पूरे भारत में आपके बजट और रुचियों से मेल खाने वाले कस्टमाइज़्ड यात्रा कार्यक्रम।"
         },
         {
-          title: "फ्लाइट और ट्रेन टिकट",
-          desc: "विशेष छूट, आईआरसीटीसी रेल बुकिंग और आसान रद्दीकरण के साथ तत्काल बुकिंग।"
-        },
-        {
           title: "वीआईपी कैब और टेम्पो ट्रांसफर",
           desc: "पेशेवर स्थानीय ड्राइवरों के साथ निजी एसी सेडान, एसयूवी और टेम्पो ट्रेवलर।"
         },
@@ -399,8 +391,8 @@ export const translations = {
           a: "हमारे पैकेजों में आम तौर पर 4-स्टार/5-स्टार होटल, दैनिक नाश्ता और रात का खाना, निजी एसी वाहन, दर्शनीय स्थल परमिट और हाउसबोट क्रूज़ शामिल हैं।"
         },
         {
-          q: "क्या आप पैकेज के साथ उड़ान और ट्रेन टिकट भी प्रदान करते हैं?",
-          a: "हां! हम लैंड पैकेज और उड़ानों या आईआरसीटीसी ट्रेन टिकटों सहित ऑल-इन्क्लूसिव पैकेज दोनों प्रदान करते हैं।"
+          q: "क्या आप टूर पैकेज पर EMI या लचीले भुगतान विकल्प देते हैं?",
+          a: "हां। चुनिंदा घरेलू पैकेजों पर हम कस्टम भुगतान शेड्यूल और EMI विकल्प उपलब्ध कराते हैं। कोटेशन अनुरोध पर आपके यात्रा विशेषज्ञ विवरण साझा करेंगे।"
         },
         {
           q: "आपकी रद्दीकरण और धनवापसी नीति क्या है?",

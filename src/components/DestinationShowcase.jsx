@@ -2,6 +2,7 @@ import React from 'react';
 import { Compass, ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageFallback';
 
 export default function DestinationShowcase({ onSelectDestination }) {
   const { lang, t } = useLanguage();
@@ -12,13 +13,15 @@ export default function DestinationShowcase({ onSelectDestination }) {
       name: { en: 'Kashmir Valley & Gulmarg Snow', hi: 'कश्मीर घाटी और गुलमर्ग बर्फ' },
       state: { en: 'Jammu & Kashmir', hi: 'जम्मू और कश्मीर' },
       image: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80',
+      query: 'Kashmir',
       badge: 'POPULAR'
     },
     {
       id: 'dest-kerala',
       name: { en: 'Kerala Backwaters & Munnar Hills', hi: 'केरल बैकवाटर और मुन्नार पहाड़ियां' },
       state: { en: 'Kerala', hi: 'केरल' },
-      image: 'https://images.unsplash.com/photo-1602216056096-3b40cc0c9944?auto=format&fit=crop&w=800&q=80',
+      image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=800&q=80',
+      query: 'Kerala',
       badge: 'TOP CHOICE'
     },
     {
@@ -26,6 +29,7 @@ export default function DestinationShowcase({ onSelectDestination }) {
       name: { en: 'Royal Forts of Rajasthan', hi: 'राजस्थान के शाही किले' },
       state: { en: 'Rajasthan', hi: 'राजस्थान' },
       image: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80',
+      query: 'Rajasthan',
       badge: 'HERITAGE'
     },
     {
@@ -33,6 +37,7 @@ export default function DestinationShowcase({ onSelectDestination }) {
       name: { en: 'Leh Ladakh Pangong Odyssey', hi: 'लेह लद्दाख पैंगोंग यात्रा' },
       state: { en: 'Ladakh', hi: 'लद्दाख' },
       image: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=800&q=80',
+      query: 'Ladakh',
       badge: 'ADVENTURE'
     }
   ];
@@ -64,12 +69,13 @@ export default function DestinationShowcase({ onSelectDestination }) {
               key={dest.id}
               whileHover={{ y: -8 }}
               className="relative h-96 rounded-3xl overflow-hidden group cursor-pointer border border-slate-200 dark:border-slate-800 shadow-lg hover:shadow-2xl transition-all"
-              onClick={() => onSelectDestination(dest.state.en)}
+              onClick={() => onSelectDestination(dest.query)}
             >
               <img
                 src={dest.image}
                 alt={dest.name[lang]}
                 className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                onError={handleImageError}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
 

@@ -2,6 +2,7 @@ import React from 'react';
 import { MapPin, Star, Clock, Plane, Building2, UtensilsCrossed, Compass, CheckCircle2, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 import { useLanguage } from '../context/LanguageContext';
+import { handleImageError } from '../utils/imageFallback';
 
 export default function PackageCard({ pkg, onSelectPackage, onQuickBook }) {
   const { lang, t } = useLanguage();
@@ -16,6 +17,7 @@ export default function PackageCard({ pkg, onSelectPackage, onQuickBook }) {
       <div className="relative h-60 w-full overflow-hidden">
         <img
           src={pkg.image}
+          onError={handleImageError}
           alt={pkg.title[lang]}
           className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           loading="lazy"
