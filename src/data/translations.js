@@ -165,7 +165,9 @@ export const translations = {
         phone: "Mobile Number",
         message: "Tell us about your trip plans...",
         send: "Send Quote Request",
-        success: "Message sent successfully! We will contact you shortly."
+        sending: "Sending your message...",
+        success: "Message sent successfully! We will contact you shortly at vipaholidays@gmail.com.",
+        error: "Could not send your message. Please try WhatsApp or call us directly."
       }
     },
     faq: {
@@ -371,7 +373,9 @@ export const translations = {
         phone: "मोबाइल नंबर",
         message: "अपनी यात्रा योजनाओं के बारे में बताएं...",
         send: "कोटेशन अनुरोध भेजें",
-        success: "संदेश सफलतापूर्वक भेजा गया! हम जल्द ही आपसे संपर्क करेंगे।"
+        sending: "आपका संदेश भेजा जा रहा है...",
+        success: "संदेश सफलतापूर्वक भेजा गया! हम जल्द vipaholidays@gmail.com पर जवाब देंगे।",
+        error: "संदेश नहीं भेजा जा सका। कृपया व्हाट्सएप या कॉल करें।"
       }
     },
     faq: {

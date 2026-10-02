@@ -1,20 +1,31 @@
 import React, { useState } from 'react';
-import { MapPin, Phone, Mail, Clock, Send, CheckCircle2 } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Send, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { siteLinks } from '../data/siteLinks';
+import { submitContactForm } from '../utils/submitContactForm';
 
 export default function ContactSection() {
   const { t } = useLanguage();
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState('');
   const [formData, setFormData] = useState({ name: '', email: '', phone: '', message: '' });
 
-  const handleContactSubmit = (e) => {
+  const handleContactSubmit = async (e) => {
     e.preventDefault();
-    setSent(true);
-    setTimeout(() => {
-      setSent(false);
+    setError('');
+    setSending(true);
+
+    try {
+      await submitContactForm(formData);
+      setSent(true);
       setFormData({ name: '', email: '', phone: '', message: '' });
-    }, 4000);
+      setTimeout(() => setSent(false), 6000);
+    } catch (err) {
+      setError(err.message || t('contact.form.error'));
+    } finally {
+      setSending(false);
+    }
   };
 
   return (
@@ -116,8 +127,15 @@ export default function ContactSection() {
 
               {sent && (
                 <div className="mb-6 p-4 rounded-2xl bg-emerald-100 dark:bg-emerald-950/40 border border-emerald-300 dark:border-emerald-500/40 text-emerald-800 dark:text-emerald-300 text-xs font-bold flex items-center gap-2">
-                  <CheckCircle2 className="w-5 h-5" />
+                  <CheckCircle2 className="w-5 h-5 shrink-0" />
                   <span>{t('contact.form.success')}</span>
+                </div>
+              )}
+
+              {error && (
+                <div className="mb-6 p-4 rounded-2xl bg-red-100 dark:bg-red-950/40 border border-red-300 dark:border-red-500/40 text-red-800 dark:text-red-300 text-xs font-bold flex items-center gap-2">
+                  <AlertCircle className="w-5 h-5 shrink-0" />
+                  <span>{error}</span>
                 </div>
               )}
 
@@ -130,10 +148,11 @@ export default function ContactSection() {
                     <input
                       type="text"
                       required
+                      disabled={sending}
                       placeholder="Your Full Name"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500 disabled:opacity-60"
                     />
                   </div>
 
@@ -144,10 +163,11 @@ export default function ContactSection() {
                     <input
                       type="tel"
                       required
+                      disabled={sending}
                       placeholder="+91 Mobile Number"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                      className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500 disabled:opacity-60"
                     />
                   </div>
                 </div>
@@ -159,10 +179,11 @@ export default function ContactSection() {
                   <input
                     type="email"
                     required
+                    disabled={sending}
                     placeholder="name@example.com"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500 disabled:opacity-60"
                   />
                 </div>
 
@@ -173,19 +194,21 @@ export default function ContactSection() {
                   <textarea
                     rows="4"
                     required
+                    disabled={sending}
                     placeholder="Travel dates, group size, or the Rajasthan package you want..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500"
+                    className="w-full px-4 py-2.5 bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-white text-xs font-semibold rounded-xl border border-slate-200 dark:border-slate-700 focus:outline-none focus:border-teal-500 disabled:opacity-60"
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-teal-600 via-teal-700 to-sky-700 hover:from-teal-500 hover:to-sky-600 text-white font-extrabold text-sm shadow-xl shadow-teal-600/20 flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-95 transition-all cursor-pointer"
+                  disabled={sending}
+                  className="w-full py-3 px-6 rounded-xl bg-gradient-to-r from-teal-600 via-teal-700 to-sky-700 hover:from-teal-500 hover:to-sky-600 text-white font-extrabold text-sm shadow-xl shadow-teal-600/20 flex items-center justify-center gap-2 hover:scale-[1.01] active:scale-95 transition-all cursor-pointer disabled:opacity-70 disabled:cursor-not-allowed"
                 >
-                  <Send className="w-4 h-4" />
-                  <span>{t('contact.form.send')}</span>
+                  {sending ? <Loader2 className="w-4 h-4 animate-spin" /> : <Send className="w-4 h-4" />}
+                  <span>{sending ? t('contact.form.sending') : t('contact.form.send')}</span>
                 </button>
               </form>
             </div>
