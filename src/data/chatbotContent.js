@@ -1,14 +1,14 @@
 export const chatbotContent = {
   en: {
     agentName: 'Vipa Travel Assistant',
-    agentSubtitle: '24/7 India tour help',
+    agentSubtitle: '24/7 Rajasthan tour help',
     openLabel: 'Chat with travel assistant',
     closeLabel: 'Close chat',
     placeholder: 'Ask about packages, services, booking...',
     send: 'Send',
     thinking: 'Typing...',
     welcome:
-      "Namaste! I'm your Vipa Holidays assistant. I can answer questions about our India tour packages, services, pricing inclusions, and policies. I can also start a booking or callback request and send your details to our team on WhatsApp.",
+      "Namaste! I'm your Vipa Holidays assistant for Rajasthan-only tours from Jodhpur — Jaisalmer, Jawai, group, and student packages. Ask about itineraries, inclusions, or policies. I can start a booking or callback and send your details to our team on WhatsApp.",
     quickActions: {
       packages: 'Tour packages',
       services: 'Our services',
@@ -20,7 +20,7 @@ export const chatbotContent = {
     prompts: {
       askName: 'Great! May I have your full name?',
       askPhone: 'Please share your mobile number (with country code if outside India).',
-      askDestination: 'Which destination or package are you interested in? (e.g. Kashmir, Kerala, Rajasthan)',
+      askDestination: 'Which Rajasthan package are you interested in? (e.g. Jodhpur Jaisalmer, Jawai, Group, Student)',
       askDate: 'Preferred travel date? (type a date or "flexible")',
       askGuests: 'How many travelers?',
       askNotes: 'Any special requests? (or type "none")',
@@ -44,14 +44,14 @@ export const chatbotContent = {
   },
   hi: {
     agentName: 'वीपा ट्रैवल असिस्टेंट',
-    agentSubtitle: '24/7 भारत टूर सहायता',
+    agentSubtitle: '24/7 राजस्थान टूर सहायता',
     openLabel: 'ट्रैवल असिस्टेंट से चैट करें',
     closeLabel: 'चैट बंद करें',
     placeholder: 'पैकेज, सेवाएं, बुकिंग के बारे में पूछें...',
     send: 'भेजें',
     thinking: 'टाइप कर रहे हैं...',
     welcome:
-      'नमस्ते! मैं वीपा हॉलिडेज असिस्टेंट हूँ। भारत टूर पैकेज, सेवाएं, शामिल सुविधाएं और नीतियों के सवालों के जवाब दे सकता/सकती हूँ। बुकिंग या कॉलबैक अनुरोध पर आपका विवरण WhatsApp पर टीम को भेज सकता/सकती हूँ।',
+      'नमस्ते! मैं वीपा हॉलिडेज असिस्टेंट हूँ — जोधपुर से राजस्थान-केवल टूर (जैसलमेर, जवाई, ग्रुप, स्टूडेंट)। यात्रा कार्यक्रम, शामिल सुविधाएं और नीतियों के सवाल पूछें। बुकिंग या कॉलबैक पर विवरण WhatsApp पर भेज सकता/सकती हूँ।',
     quickActions: {
       packages: 'टूर पैकेज',
       services: 'हमारी सेवाएं',
@@ -63,7 +63,7 @@ export const chatbotContent = {
     prompts: {
       askName: 'बढ़िया! कृपया अपना पूरा नाम बताएं।',
       askPhone: 'अपना मोबाइल नंबर साझा करें (विदेश से हैं तो देश कोड के साथ)।',
-      askDestination: 'कौन सा गंतव्य या पैकेज चाहिए? (जैसे कश्मीर, केरल, राजस्थान)',
+      askDestination: 'कौन सा राजस्थान पैकेज चाहिए? (जैसे जोधपुर जैसलमेर, जवाई, ग्रुप, स्टूडेंट)',
       askDate: 'पसंदीदा यात्रा तिथि? (तारीख लिखें या "flexible")',
       askGuests: 'कितने यात्री हैं?',
       askNotes: 'कोई विशेष अनुरोध? ("none" लिख सकते हैं)',

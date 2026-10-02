@@ -53,7 +53,7 @@ function AppContent() {
           onQuickBook={(pkg) => handleOpenBooking(pkg)}
         />
 
-        {/* Indian Spotlights */}
+        {/* Rajasthan spotlights */}
         <DestinationShowcase onSelectDestination={handleSelectDestination} />
 
         {/* Services Showcase */}

@@ -9,36 +9,36 @@ export default function DestinationShowcase({ onSelectDestination }) {
 
   const destinations = [
     {
-      id: 'dest-kashmir',
-      name: { en: 'Kashmir Valley & Gulmarg Snow', hi: 'कश्मीर घाटी और गुलमर्ग बर्फ' },
-      state: { en: 'Jammu & Kashmir', hi: 'जम्मू और कश्मीर' },
-      image: 'https://images.unsplash.com/photo-1595815771614-ade9d652a65d?auto=format&fit=crop&w=800&q=80',
-      query: 'Kashmir',
+      id: 'dest-jodhpur',
+      name: { en: 'Jodhpur — Blue City & Mehrangarh', hi: 'जोधपुर — ब्लू सिटी और मेहरानगढ़' },
+      state: { en: 'Jodhpur', hi: 'जोधपुर' },
+      image: 'https://images.unsplash.com/photo-1602643163983-ed0babc397d6?auto=format&fit=crop&w=800&q=80',
+      query: 'Jodhpur',
       badge: 'POPULAR'
     },
     {
-      id: 'dest-kerala',
-      name: { en: 'Kerala Backwaters & Munnar Hills', hi: 'केरल बैकवाटर और मुन्नार पहाड़ियां' },
-      state: { en: 'Kerala', hi: 'केरल' },
-      image: 'https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=800&q=80',
-      query: 'Kerala',
-      badge: 'TOP CHOICE'
+      id: 'dest-jaisalmer',
+      name: { en: 'Jaisalmer — Golden Fort & Sam Dunes', hi: 'जैसलमेर — गोल्डन फोर्ट और सैम ड्यून्स' },
+      state: { en: 'Jaisalmer', hi: 'जैसलमेर' },
+      image: 'https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=800&q=80',
+      query: 'Jaisalmer',
+      badge: 'DESERT'
+    },
+    {
+      id: 'dest-jawai',
+      name: { en: 'Jawai — Leopard Hills & Lakeside', hi: 'जवाई — तेंदुआ पहाड़ियां और झील' },
+      state: { en: 'Jawai', hi: 'जवाई' },
+      image: 'https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=800&q=80',
+      query: 'Jawai',
+      badge: 'WILDLIFE'
     },
     {
       id: 'dest-group',
-      name: { en: 'Rajasthan Group Tours', hi: 'राजस्थान ग्रुप टूर' },
-      state: { en: 'Group Tours', hi: 'ग्रुप टूर' },
+      name: { en: 'Rajasthan Group & Student Tours', hi: 'राजस्थान ग्रुप और स्टूडेंट टूर' },
+      state: { en: 'Group departures', hi: 'ग्रुप प्रस्थान' },
       image: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80',
-      query: 'Rajasthan',
-      badge: 'HERITAGE'
-    },
-    {
-      id: 'dest-ladakh',
-      name: { en: 'Leh Ladakh Pangong Odyssey', hi: 'लेह लद्दाख पैंगोंग यात्रा' },
-      state: { en: 'Ladakh', hi: 'लद्दाख' },
-      image: 'https://images.unsplash.com/photo-1581793745862-99fde7fa73d2?auto=format&fit=crop&w=800&q=80',
-      query: 'Ladakh',
-      badge: 'ADVENTURE'
+      query: 'Group',
+      badge: 'GROUPS'
     }
   ];
 
@@ -79,17 +79,15 @@ export default function DestinationShowcase({ onSelectDestination }) {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent"></div>
 
-              {/* Badge */}
               <div className="absolute top-4 left-4 bg-teal-600 text-white font-black text-[11px] px-3 py-1 rounded-full uppercase tracking-wider shadow-md">
                 {dest.badge}
               </div>
 
-              {/* Bottom Content */}
               <div className="absolute bottom-6 left-6 right-6 flex flex-col gap-1 text-white">
                 <span className="text-xs text-teal-300 font-bold tracking-widest uppercase">
                   {dest.state[lang]} • Rajasthan
                 </span>
-                <h3 className="text-xl font-black font-outfit line-clamp-1 group-hover:text-teal-200 transition-colors">
+                <h3 className="text-xl font-black font-outfit line-clamp-2 group-hover:text-teal-200 transition-colors">
                   {dest.name[lang]}
                 </h3>
                 <div className="mt-2 flex items-center gap-2 text-xs font-bold text-slate-200 group-hover:text-white">

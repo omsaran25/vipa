@@ -4,12 +4,10 @@ import { useLanguage } from '../context/LanguageContext';
 import { siteLinks } from '../data/siteLinks';
 
 const destinationFilters = [
-  { label: 'Kashmir Valley & Gulmarg', query: 'Kashmir' },
-  { label: 'Kerala Backwaters & Munnar', query: 'Kerala' },
-  { label: 'Rajasthan Royal Forts', query: 'Rajasthan' },
-  { label: 'Manali & Solang Valley', query: 'Manali' },
-  { label: 'Leh Ladakh Expedition', query: 'Ladakh' },
-  { label: 'Goa Beach Vacation', query: 'Goa' },
+  { label: 'Jodhpur Jaisalmer Tour (3N/4D)', query: 'Jaisalmer' },
+  { label: 'Jodhpur Jawai Tour (2N/3D)', query: 'Jawai' },
+  { label: 'Rajasthan Group Tour', query: 'Group' },
+  { label: 'Rajasthan Student Group Tour', query: 'Student' },
 ];
 
 export default function Footer({ onSelectDestination }) {

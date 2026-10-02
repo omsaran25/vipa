@@ -20,10 +20,10 @@ export default function Hero({ onSearchSubmit, onOpenBooking }) {
       query: "Jaisalmer"
     },
     {
-      title: { en: "Kerala Serene Backwaters", hi: "केरल शांत बैकवाटर" },
-      tag: "God's Own Country",
-      image: "https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=800&q=80",
-      query: "Kerala"
+      title: { en: "Jodhpur Jawai — 2N / 3D", hi: "जोधपुर जवाई — 2 रात / 3 दिन" },
+      tag: "Wildlife",
+      image: "https://images.unsplash.com/photo-1456926631375-92c8ce872def?auto=format&fit=crop&w=800&q=80",
+      query: "Jawai"
     },
     {
       title: { en: "Group & Student Tours", hi: "ग्रुप और स्टूडेंट टूर" },

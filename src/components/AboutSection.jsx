@@ -30,8 +30,8 @@ export default function AboutSection() {
                   onError={handleImageError}
                 />
                 <img
-                  src="https://images.unsplash.com/photo-1593693397690-362cb9666fc2?auto=format&fit=crop&w=600&q=80"
-                  alt="Kerala Backwaters"
+                  src="https://images.unsplash.com/photo-1599661046289-e31897846e41?auto=format&fit=crop&w=600&q=80"
+                  alt="Jaisalmer desert and fort"
                   className="rounded-3xl object-cover h-44 w-full shadow-lg border border-slate-200 dark:border-slate-800"
                   onError={handleImageError}
                 />
