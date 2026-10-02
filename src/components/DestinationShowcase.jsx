@@ -28,7 +28,6 @@ export default function DestinationShowcase({ onSelectDestination }) {
       id: 'dest-group',
       name: { en: 'Rajasthan Group Tours', hi: 'राजस्थान ग्रुप टूर' },
       state: { en: 'Group Tours', hi: 'ग्रुप टूर' },
-      query: 'Rajasthan Group',
       image: 'https://images.unsplash.com/photo-1477587458883-47145ed94245?auto=format&fit=crop&w=800&q=80',
       query: 'Rajasthan',
       badge: 'HERITAGE'

@@ -73,7 +73,7 @@ export const translations = {
       email: "Email Address",
       emailPlaceholder: "rahul@example.com",
       phone: "Phone / WhatsApp Number",
-      phonePlaceholder: "+91 86969 24806",
+      phonePlaceholder: "+91-8696924806",
       destination: "Selected Package / Destination",
       travelDate: "Preferred Departure Date",
       travelers: "Number of Guests",
@@ -174,7 +174,7 @@ export const translations = {
       items: [
         {
           q: "How do I request a Rajasthan tour quote?",
-          a: "Choose a package and click Get Custom Quote, or call / WhatsApp +91 86969 24806 and +91 87644 81101. You can also email vipaholidays@gmail.com."
+          a: "Choose a package and click Get Custom Quote, or call / WhatsApp +91-8696924806. You can also email vipaholidays@gmail.com."
         },
         {
           q: "Can I customize the itinerary according to my family schedule?",
@@ -279,7 +279,7 @@ export const translations = {
       email: "ईमेल पता",
       emailPlaceholder: "rahul@example.com",
       phone: "फोन / व्हाट्सएप नंबर",
-      phonePlaceholder: "+91 86969 24806",
+      phonePlaceholder: "+91-8696924806",
       destination: "चयनित पैकेज / गंतव्य",
       travelDate: "यात्रा की पसंदीदा तारीख",
       travelers: "यात्रियों की संख्या",
@@ -380,7 +380,7 @@ export const translations = {
       items: [
         {
           q: "मैं राजस्थान टूर कोटेशन कैसे प्राप्त करूं?",
-          a: "पैकेज चुनें और कोटेशन प्राप्त करें पर क्लिक करें, या +91 86969 24806 और +91 87644 81101 पर कॉल / व्हाट्सएप करें। ईमेल vipaholidays@gmail.com पर भी लिख सकते हैं।"
+          a: "पैकेज चुनें और कोटेशन प्राप्त करें पर क्लिक करें, या +91-8696924806 पर कॉल / व्हाट्सएप करें। ईमेल vipaholidays@gmail.com पर भी लिख सकते हैं।"
         },
         {
           q: "क्या मैं अपने परिवार के शेड्यूल के अनुसार यात्रा कार्यक्रम को अनुकूलित कर सकता हूं?",
